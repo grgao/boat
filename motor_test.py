@@ -15,7 +15,7 @@ time.sleep(1)
 MIN_DUTY = 5   # 1ms pulse (Full reverse)
 NEUTRAL_DUTY = 7.5  # 1.5ms pulse (Stop)
 MAX_DUTY = 10  # 2ms pulse (Full forward)
-STEP = 0.2  # How much to increase/decrease per step
+STEP = 0.05  # How much to increase/decrease per step
 DELAY = 0.05  # Time delay per step for smooth throttle
 
 current_duty = NEUTRAL_DUTY
@@ -30,7 +30,6 @@ try:
                 if current_duty > MAX_DUTY:
                     current_duty = MAX_DUTY  # Ensure it doesn't exceed max
                 pwm.ChangeDutyCycle(current_duty)
-                print(f"Thruster: Increasing Forward Thrust ({current_duty:.1f}%)")
                 time.sleep(DELAY)
 
         elif user_input == "b":
@@ -39,7 +38,6 @@ try:
                 if current_duty < MIN_DUTY:
                     current_duty = MIN_DUTY  # Ensure it doesn't go below min
                 pwm.ChangeDutyCycle(current_duty)
-                print(f"Thruster: Increasing Reverse Thrust ({current_duty:.1f}%)")
                 time.sleep(DELAY)
 
         elif user_input == "s":
@@ -54,7 +52,6 @@ try:
                         current_duty = NEUTRAL_DUTY
                 
                 pwm.ChangeDutyCycle(current_duty)
-                print(f"Thruster: Slowing to Stop ({current_duty:.1f}%)")
                 time.sleep(DELAY)
 
         elif user_input == "q":
