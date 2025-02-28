@@ -9,6 +9,7 @@ GPIO.setup(PWM_PIN, GPIO.OUT)
 # Create a PWM instance with a frequency of 50Hz (20ms period)
 pwm = GPIO.PWM(PWM_PIN, 50)
 pwm.start(7.5)
+time.sleep(1)
 
 try:
     while True:
