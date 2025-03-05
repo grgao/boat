@@ -1,84 +1,69 @@
 import RPi.GPIO as GPIO
 import time
 
-MOTOR_PWM_PIN = 12
-SERVO_PWM_PIN = 13
+PWM_PIN = 12
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(MOTOR_PWM_PIN, GPIO.OUT)
-GPIO.setup(SERVO_PWM_PIN, GPIO.OUT)
+GPIO.setup(PWM_PIN, GPIO.OUT)
 
 # Create a PWM instance with a frequency of 50Hz (20ms period)
-motor_pwm = GPIO.PWM(MOTOR_PWM_PIN, 50)
-servo_pwm = GPIO.PWM(SERVO_PWM_PIN, 50)
-
-motor_pwm.start(7.5)
-servo_pwm.start(7.5)
+pwm = GPIO.PWM(PWM_PIN, 50)
+pwm.start(7.5)
 time.sleep(1)
 
-# Define motor min/max/neutral duty cycles
-MOTOR_MIN_DUTY = 5      # Full reverse (1ms pulse)
-MOTOR_NEUTRAL_DUTY = 7.5  # Stop (1.5ms pulse)
-MOTOR_MAX_DUTY = 10     # Full forward (2ms pulse)
-MOTOR_STEP = 0.05
-MOTOR_DELAY = 0.05
+# Define min, max, and neutral duty cycle values
+MIN_DUTY = 5   # 1ms pulse (Full reverse)
+NEUTRAL_DUTY = 7.5  # 1.5ms pulse (Stop)
+MAX_DUTY = 10  # 2ms pulse (Full forward)
+STEP = 0.05  # How much to increase/decrease per step
+DELAY = 0.05  # Time delay per step for smooth throttle
 
-# Define servo duty cycle limits
-SERVO_MIN_DUTY = 2.5   # 0° (500us)
-SERVO_NEUTRAL_DUTY = 7.5  # 90° (1500us)
-SERVO_MAX_DUTY = 12.5  # 180° (2500us)
+current_duty = NEUTRAL_DUTY
 
-current_motor_duty = MOTOR_NEUTRAL_DUTY
-current_servo_duty = SERVO_NEUTRAL_DUTY
 try:
     while True:
-        user_input = input("Enter 'f' (forward), 'b' (backward), 's' (stop), 'l' (left), 'r' (right), 'c' (center), or 'q' (quit): ").strip().lower()
+        user_input = input("Enter 'f' for forward, 'b' for backward, 's' to stop, or 'q' to quit: ").lower()
+        
+        if user_input == "f":
+            while current_duty < MAX_DUTY:
+                current_duty += STEP
+                if current_duty > MAX_DUTY:
+                    current_duty = MAX_DUTY  # Ensure it doesn't exceed max
+                pwm.ChangeDutyCycle(current_duty)
+                time.sleep(DELAY)
 
-        if user_input.startswith("f"):  # Forward acceleration
-            while current_motor_duty < MOTOR_MAX_DUTY:
-                current_motor_duty = min(current_motor_duty + MOTOR_STEP, MOTOR_MAX_DUTY)
-                motor_pwm.ChangeDutyCycle(current_motor_duty)
-                time.sleep(MOTOR_DELAY)
+        elif user_input == "b":
+            while current_duty > MIN_DUTY:
+                current_duty -= STEP
+                if current_duty < MIN_DUTY:
+                    current_duty = MIN_DUTY  # Ensure it doesn't go below min
+                pwm.ChangeDutyCycle(current_duty)
+                time.sleep(DELAY)
 
-        elif user_input.startswith("b"):  # Reverse acceleration
-            while current_motor_duty > MOTOR_MIN_DUTY:
-                current_motor_duty = max(current_motor_duty - MOTOR_STEP, MOTOR_MIN_DUTY)
-                motor_pwm.ChangeDutyCycle(current_motor_duty)
-                time.sleep(MOTOR_DELAY)
+        elif user_input == "s":
+            while current_duty != NEUTRAL_DUTY:
+                if current_duty > NEUTRAL_DUTY:
+                    current_duty -= STEP
+                    if current_duty < NEUTRAL_DUTY:
+                        current_duty = NEUTRAL_DUTY
+                else:
+                    current_duty += STEP
+                    if current_duty > NEUTRAL_DUTY:
+                        current_duty = NEUTRAL_DUTY
+                
+                pwm.ChangeDutyCycle(current_duty)
+                time.sleep(DELAY)
 
-        elif user_input.startswith("s"):  # Smooth stop
-            while round(current_motor_duty, 2) != MOTOR_NEUTRAL_DUTY:
-                current_motor_duty += MOTOR_STEP if current_motor_duty < MOTOR_NEUTRAL_DUTY else -MOTOR_STEP
-                motor_pwm.ChangeDutyCycle(current_motor_duty)
-                time.sleep(MOTOR_DELAY)
-
-        elif user_input.startswith("l"):  # Turn Left (0°)
-            current_servo_duty = SERVO_MIN_DUTY
-            servo_pwm.ChangeDutyCycle(current_servo_duty)
-            print("Turning left...")
-
-        elif user_input.startswith("r"):  # Turn Right (180°)
-            current_servo_duty = SERVO_MAX_DUTY
-            servo_pwm.ChangeDutyCycle(current_servo_duty)
-            print("Turning right...")
-
-        elif user_input.startswith("c"):  # Center steering (90°)
-            current_servo_duty = 7.5  # 90° position (1.5ms pulse)
-            servo_pwm.ChangeDutyCycle(current_servo_duty)
-            print("Steering centered.")
-
-        elif user_input.startswith("q"):  # Quit
-            print("Exiting motor and servo control...")
-            break
-
+        elif user_input == "q":
+            break  # Exit loop and cleanup
+        
         else:
-            print("Invalid input. Use 'f' (forward), 'b' (backward), 's' (stop), 'l' (left), 'r' (right), 'c' (center), or 'q' (quit).")
+            print("Invalid input. Use 'f' (forward), 'b' (backward), 's' (stop), or 'q' (quit).")
 
 except KeyboardInterrupt:
-    print("\nExiting gracefully...")
+    print("\nPWM Stopped.")
 
 finally:
-    motor_pwm.stop()
-    servo_pwm.stop()
+    pwm.stop()
     GPIO.cleanup()
     print("GPIO Cleaned Up.")
