@@ -8,14 +8,16 @@ A = 0.91 * 0.61  # 2x3 ft loop
 f = 30  # frequency that you are driving the loop at. This small signal comes from the Raspberry Pi.
 w = 2 * np.pi * f
 
-m = N * I * A  # N is the number of turns, I is the current in the wire, and A is the area of the loop.
+magnetic_moment = N * I * A  # N is the number of turns, I is the current in the wire, and A is the area of the loop.
 
 METER_TO_FEET = 3.28084
 
-rl = 20.9 / 1000  # Ohms per meter of wire for #18 AWG
+
+rl_18AWG = 20.9 / 1000  # Ohms per meter of wire for #18 AWG
+
 
 perimiter = 0.91 * 2 + 0.61 * 2
-R = (perimiter) * N * rl
+R = (perimiter) * N * rl_18AWG
 
 perimiter_feet = perimiter * METER_TO_FEET
 
@@ -37,7 +39,7 @@ Cs = 1 / (L * w**2)  # Series capacitance needed to cancel inductance
 P = 0.5 * I**2 * R
 
 # Print results
-print(f"Magnetic moment (m): {m:.2f} Am^2")
+print(f"Magnetic moment (m): {magnetic_moment:.2f} Am^2")
 print(f"Resistance (R): {R:.6f} Ohms")
 print(f"Inductance (L): {L:.6f} H")
 print(f"Impedance magnitude (|Z|): {magZ:.6f} Ohms")
