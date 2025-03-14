@@ -3,7 +3,7 @@ import time
 import math
 
 # Set up PWM pin
-PWM_PIN = 18  # Use a PWM-capable GPIO pin (e.g., GPIO 18)
+PWM_PIN = 12  # Use a PWM-capable GPIO pin (e.g., GPIO 18)
 FREQ = 1000  # Base PWM frequency (1 kHz)
 SINE_FREQ = 40  # Desired sine wave frequency (40 Hz)
 STEPS = 100  # Number of steps per sine wave cycle
