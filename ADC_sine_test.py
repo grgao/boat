@@ -10,13 +10,17 @@ i2c = busio.I2C(board.SCL, board.SDA)
 dac = adafruit_mcp4725.MCP4725(i2c)
 
 # DAC settings
-VREF = 4095  # 12-bit resolution max value, this will be 3.3V if we use that pin or 5V if we use that one
+# Scale sine wave to 300mV peak-to-peak 
+VREF = 4095  # Full-scale DAC value
+VPP_RATIO = 0.09  # Scaling ratio for 3.3V to 300mV
+DAC_MAX = int(VREF * VPP_RATIO)  # Limit DAC output
+
 FREQ = 40  # sine wave frequency (Hz) Idk why the other one output 30 Hz but this might work better
 SAMPLERATE = 5000  # Number of samples per second (higher = smoother)
 STEPS = 100  # Steps per sine wave cycle
 
 # Precompute sine wave lookup table *check my math pls*
-sine_wave = [int((math.sin(2 * math.pi * i / STEPS) + 1) * VREF / 2) for i in range(STEPS)]
+sine_wave = [int((math.sin(2 * math.pi * i / STEPS) + 1) * (DAC_MAX / 2)) for i in range(STEPS)]
 
 # Output the sine wave
 try:
