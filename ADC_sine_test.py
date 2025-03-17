@@ -1,7 +1,5 @@
 import time
 import board
-import time
-import board
 import busio
 import math
 import adafruit_mcp4725
@@ -37,4 +35,4 @@ try:
             dac.raw_value = value  # Send value to DAC
             time.sleep(1 / SAMPLERATE)  # Control waveform smoothness
 except KeyboardInterrupt:
-    print("\nExiting gracefully...")
+    print("\nExiting...")
