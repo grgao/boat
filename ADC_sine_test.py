@@ -7,7 +7,7 @@ import adafruit_mcp4725
 
 # Set up I2C communication (I think, not sure, google said this)
 i2c = busio.I2C(board.SCL, board.SDA)
-dac = adafruit_mcp4725.MCP4725(i2c)
+dac = adafruit_mcp4725.MCP4725(i2c, address=0x60)  # MCP4725 address
 
 # DAC settings
 # Scale sine wave to 300mV peak-to-peak 
