@@ -1,37 +1,33 @@
 import time
+import math
 import board
 import busio
-import math
 import adafruit_mcp4725
 
 # Initialize I2C and MCP4725 DAC
 i2c = busio.I2C(board.SCL, board.SDA)
 dac = adafruit_mcp4725.MCP4725(i2c, address=0x60)
 
+# Sine wave parameters
+FREQ = 40  # 40 Hz sine wave
+SAMPLERATE = 5000  # Must be much higher than 40Hz for smooth output
+STEPS = 100  # Number of steps per cycle
 
+# Full DAC range (0 to 4095) for 3.3Vpp
+DAC_MAX = 4095  # 3.3V
+DAC_MIN = 0     # 0V
 
-# There are a three ways to set the DAC output, you can use any of these:
-dac.value = 65535  # Use the value property with a 16-bit number just like
-# the AnalogOut class.  Note the MCP4725 is only a 12-bit
-# DAC so quantization errors will occur.  The range of
-# values is 0 (minimum/ground) to 65535 (maximum/Vout).
+# Generate sine wave lookup table (from 0V to 3.3V)
+sine_wave = [
+    int(DAC_MIN + (DAC_MAX - DAC_MIN) * (math.sin(2 * math.pi * i / STEPS) + 1) / 2)
+    for i in range(STEPS)
+]
 
-dac.raw_value = 4095  # Use the raw_value property to directly read and write
-# the 12-bit DAC value.  The range of values is
-# 0 (minimum/ground) to 4095 (maximum/Vout).
-
-dac.normalized_value = 1.0  # Use the normalized_value property to set the
-# output with a floating point value in the range
-# 0 to 1.0 where 0 is minimum/ground and 1.0 is
-# maximum/Vout.
-
-# Main loop will go up and down through the range of DAC values forever.
-while True:
-    # Go up the 12-bit raw range.
-    print("Going up 0-3.3V...")
-    for i in range(4095):
-        dac.raw_value = i
-    # Go back down the 12-bit raw range.
-    print("Going down 3.3-0V...")
-    for i in range(4095, -1, -1):
-        dac.raw_value = i
+# Output sine wave continuously
+try:
+    while True:
+        for value in sine_wave:
+            dac.raw_value = value  # Send value to DAC
+            time.sleep(1 / (SAMPLERATE))  # Control smoothness
+except KeyboardInterrupt:
+    print("\nExiting...")
