@@ -12,7 +12,7 @@ dac = adafruit_mcp4725.MCP4725(i2c, address=0x60)  # MCP4725 address
 # DAC settings
 # Scale sine wave to 300mV peak-to-peak 
 VREF = 4095  # Full-scale DAC value
-VPP_RATIO = 1  # Scaling ratio for 3.3V to 300mV 0.09
+VPP_RATIO = 0.09  # Scaling ratio for 3.3V to 300mV 0.09
 DAC_MAX = int(VREF * VPP_RATIO)  # Limit DAC output
 
 FREQ = 40  # sine wave frequency (Hz) Idk why the other one output 30 Hz but this might work better
