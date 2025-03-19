@@ -11,10 +11,9 @@ AMPLITUDE = 300 / 2000  # Scale for 300mVpp if the default output is ~2Vpp
 t = np.linspace(0, DURATION, int(SAMPLE_RATE * DURATION), endpoint=False)
 wave = (AMPLITUDE * np.sin(2 * np.pi * FREQ * t)).astype(np.float32)
 
-# Initialize audio stream with correct device
+# Initialize PyAudio and select correct device
 p = pyaudio.PyAudio()
 
-# Find the bcm2835 Headphones (hw:2,0) device
 device_index = None
 for i in range(p.get_device_count()):
     dev = p.get_device_info_by_index(i)
@@ -23,7 +22,7 @@ for i in range(p.get_device_count()):
         break
 
 if device_index is None:
-    raise RuntimeError("Could not find bcm2835 Headphones device!")
+    raise RuntimeError("Could not find bcm2835 Headphones output device!")
 
 # Open the audio stream
 stream = p.open(format=pyaudio.paFloat32, channels=1, rate=SAMPLE_RATE, output=True, output_device_index=device_index)
