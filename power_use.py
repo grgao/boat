@@ -9,7 +9,7 @@ parts = [
     {'name': 'Propulsion motor', 'percentage_on': 15, 'power_use': 60},
     {'name': 'Transmission loop', 'percentage_on': 100, 'power_use': average_loop_power},
     {'name': 'Raspberry Pi', 'percentage_on': 100, 'power_use': 4},
-    {'name': 'Servo', 'percentage_on': 1, 'power_use': 10},   # Update Servo power usage and estimation of percentage on
+    {'name': 'Servo', 'percentage_on': 10, 'power_use': 10},   # Update Servo power usage and estimation of percentage on
     {'name': 'Sensors', 'percentage_on': 100, 'power_use': 1},
     {'name': 'Flight Controller', 'percentage_on': 100, 'power_use': 4} # Estimating same as the Pi
     # Add more parts as needed
@@ -22,7 +22,7 @@ PV_power_potential = 4  # kWh/kWp/day; multiplied by our panel wattage gives an 
 operating_hours = 24    # Hours, how long the boat will be operating for
 using_solar = True
 
-solar_panel_wattage = 100  # Watts
+solar_panel_wattage = 60  # Watts. 55W is around the minimum for an autonomous system
 CELL_VOLTAGE = 3.7         # Volts
 
 # Battery Specs
@@ -61,16 +61,16 @@ print(f"Energy generated per day: {energy_generated_per_day:.2f}Wh")
 print(f"System is autonomous: {energy_generated_per_day > daily_energy_usage}")
 
 # Assume battery capacity is as calculated from specs or set to a specific value for simulation.
-battery_capacity_Wh = 192
+battery_capacity_Wh = 2*12.8*8
 
-def simulate_days(N, operating_hours=24):
-    simulation_duration_seconds = N * operating_hours * 3600  # N days in seconds
+def simulate_days(days, operating_hours=24):
+    simulation_duration_seconds = days * operating_hours * 3600  # N days in seconds
     battery_energy = battery_capacity_Wh  # Wh; start fully charged
 
     energy_usage_per_sec = total_power_usage / 3600.0  # Wh per second
     solar_energy_per_sec = solar_panel_wattage / 3600.0  # Wh per second
 
-    print(f"Starting {N}-day simulation (second-by-second)...")
+    print(f"Starting {days}-day simulation (second-by-second)...")
     
     for t in range(simulation_duration_seconds):
         current_hour = (t / 3600.0) % 24  # current hour of the day (resets every 24 hours)
@@ -95,4 +95,4 @@ def simulate_days(N, operating_hours=24):
     else:
         print("System is not autonomous after the simulation period.")
 
-simulate_days(20, 12)  # Simulate for 3 days
+simulate_days(10, 8)  # Simulate 8 hours for 5 days
