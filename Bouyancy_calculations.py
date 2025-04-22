@@ -8,6 +8,7 @@ SALTWATER_DENSITY = 1025     # kg/m³, typical density of seawater
 NUM_PIPES = 2
 INNER_DIAMETER_IN = 4.0      # Inner diameter in inches
 LENGTH_IN = 30               # Length in inches
+WEIGHT_PER_FOOT_PVC = 2.01
 
 def in_to_m(inches):
     """Convert inches to meters."""
@@ -28,7 +29,8 @@ inner_radius = in_to_m(INNER_DIAMETER_IN) / 2
 length_m = in_to_m(LENGTH_IN)
 single_pipe_volume = math.pi * (inner_radius ** 2) * length_m
 total_pipe_volume = single_pipe_volume * NUM_PIPES
-pipe_mass = total_pipe_volume * POLYCARB_DENSITY
+
+pipe_mass = (WEIGHT_PER_FOOT_PVC * LENGTH_IN / 12) # add lb to kg conversion
 
 # --- TOTAL WEIGHT CALCULATION ---
 component_sum = sum(components.values())
@@ -43,12 +45,16 @@ required_buoyancy = total_weight * safety_margin
 required_foam = required_buoyancy - buoyant_force
 
 # --- FOAM MATERIAL OPTIONS (INCLUDING PINK EPS FOAM) ---
+# Buoyancy is equal to F= Rho * V * g;
+# Weight of item m = density*v
+# effective bouyant force Fb = F - g*m
+
 foams = {
     'Polyethylene': 0.90,    # Marine foam
     'Polyurethane': 0.85,    # Marine foam
     'PVC Foam': 0.52,        # Structural
     'Syntactic Foam': 0.88,  # Deep water
-    'Pink EPS Foam': 0.98    # 2 lb/ft³ density (~32 kg/m³)
+    'Pink EPS Foam': 0.98    #  lb/ft³ density (~32 kg/m³)2
 }
 
 print("[BUOYANCY ANALYSIS]")
