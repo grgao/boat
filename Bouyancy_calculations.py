@@ -47,7 +47,7 @@ required_foam = required_buoyancy - buoyant_force
 # --- FOAM BOUYANCY (kg/m³) ---
 EPS_FOAM_DENSITY = 22.5  # kg/m³, density of EPS foam
 EPS_FOAM_THICKNESS = 2
-foam_volume = length_m * WIDTH_IN * INCHES_TO_METERS * EPS_FOAM_THICKNESS * INCHES_TO_METERS  # m³
+foam_volume = (length_m * WIDTH_IN * INCHES_TO_METERS) * (EPS_FOAM_THICKNESS * INCHES_TO_METERS)  # m³
 foam_bouyancy = SALTWATER_DENSITY * foam_volume  # kg/m³
 
 
@@ -63,5 +63,5 @@ print(f"Total Vessel Weight: {total_weight:.2f} kg")
 print(f"Pipe Buoyancy Contribution: {buoyant_force:.2f} kg")
 print(f"Total Buoyancy Required: {required_buoyancy:.2f} kg")
 print(f"Required Foam Buoyancy: {required_foam:.2f} kg\n")
-print(f"Foam Volume: {foam_volume:.2f} m³")
+print(f"Foam Volume: {foam_volume:.4f} m³")
 print(f"Foam Bouyancy: {foam_bouyancy:.2f} kg")
