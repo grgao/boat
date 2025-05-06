@@ -1,6 +1,6 @@
 \section{Electrical}
 
-The ASV is powered by two 12.8V 8Ah LiFePO4 batteries connected in parallel. A 100W solar panel mounted above the electronics enclosure charges the batteries directly, with a blocking diode to prevent reverse current during low-light conditions.
+The ASV is powered by two 12.8V 8Ah LiFePO4 batteries connected in parallel. A 100W solar panel mounted above the electronics enclosure outputs power to an MPPT controlller, which continuasly regulates the voltage and current to maximize the power output from the solar panel. The charge controller adjusts the variable DC that comes in from the solar panel to a constant voltage and current that is suitable for charging the batteries. 
 
 Power is distributed through three buck converters that step the 12.8V battery voltage down to 5V. One converter powers the Raspberry Pi, another supplies the SpeedyBee F405 V4 flight controller and GPS, and the third is dedicated to the servo motor. All components are placed inside a waterproof enclosure without mounting hardware.
 
