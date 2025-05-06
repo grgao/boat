@@ -13,7 +13,24 @@ Power is distributed through three buck converters that step the 12.8V battery v
 
 The SpeedyBee F405 V4 flight controller runs iNav firmware and handles both GPS waypoint navigation and motor control. It outputs PWM signals to the brushed DC motor and rudder servo and receives location data from a GPS module. The GPS is soldered directly to UART6 on the flight controller: TX from the GPS is connected to RX6, and RX from the GPS is connected to TX6. A FlySky FS-iA6B receiver is soldered directly to the RX2 pad on the flight controller for SBUS communication, enabling manual RC override when needed.
 
-To generate a magnetic field, a 40 Hz sine wave is created by a prebuilt signal generator and passed through a power amplifier. The amplified signal drives a large copper coil wrapped around the boat's structure, producing a low-frequency magnetic field detectable by submerged sensors.
+To generate a magnetic field, a 40 Hz sine wave is created by a prebuilt signal generator and passed through a power amplifier. The amplified signal drives a large copper coil wrapped around the boat’s structure, producing a low-frequency magnetic field detectable by submerged sensors.
+
+The magnetic field \( B \) at the center of a circular coil is given by:
+
+\begin{equation}
+B = \frac{\mu_0 N I}{2R}
+\label{eq:bfield}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( \mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A} \) is the permeability of free space,
+    \item \( N \) is the number of turns in the coil,
+    \item \( I \) is the current through the coil,
+    \item \( R \) is the radius of the coil.
+\end{itemize}
+
+This equation demonstrates that the magnetic field strength increases with more turns or higher current and decreases with a larger coil radius. The 40 Hz frequency was chosen to ensure good penetration through water with minimal signal loss, making it suitable for detection by submerged sensors.
 
 All electrical connections are made using soldered wires. Power and signal lines are routed manually inside the enclosure. Signal and high-current paths are physically separated to minimize noise. Fuses are installed on the battery output lines to protect critical components from short circuits.
 
