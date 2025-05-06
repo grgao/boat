@@ -57,7 +57,6 @@ foam_bouyancy = SALTWATER_DENSITY * foam_volume  # kg/m³
 # effective bouyant force Fb = F - g*m
 
 
-
 print("[BUOYANCY ANALYSIS]")
 print(f"PVC Pipe Mass: {pipe_mass:.2f} kg")
 print(f"Total Vessel Weight: {total_weight:.2f} kg")

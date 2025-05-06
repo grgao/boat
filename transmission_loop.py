@@ -51,11 +51,11 @@ wires = {
 }
 
 # We want to minimize power and weight, so minimize current 1st, then number of turns
-N = 78 # Coil has been wound with 78 turns, need to solder for more. 
+N = 51 # Coil has been wound with 78 turns, need to solder for more. 
 I = 1.63  # Peak AC current, divide by sqrt2 for RMS current
 
 width = 2 * FEET_TO_METER # 2 ft loop
-height = 2.166 * FEET_TO_METER # 2.5 ft loop
+height = 30/12 * FEET_TO_METER # 2.5 ft loop
 
 A = width * height 
 f = 30  # frequency that you are driving the loop at. This small signal comes from the Raspberry Pi.
