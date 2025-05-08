@@ -1,2 +1,55 @@
 \section{Operating Instructions}
-In this section, please provide detailed, step by step instructions on how to operate your project (what buttons you have to push, different display readings, etc). 
+
+Follow these steps to safely operate the Autonomous Surface Vehicle (ASV):
+
+\begin{enumerate}
+    \item \textbf{Power On:}
+    \begin{itemize}
+        \item Ensure the batteries are charged. The solar panel provides slow passive charging and should not be relied on for full charge.
+        \item Inside the electronics enclosure, connect the battery wires. Each lead is clearly labeled for polarity—connect positive to positive and negative to negative.
+        \item Verify that LEDs on the flight controller (SpeedyBee F405 V4) illuminate, indicating power to the system.
+    \end{itemize}
+
+    \item \textbf{System Initialization:}
+    \begin{itemize}
+        \item Wait a few seconds for the flight controller to initialize.
+        \item Confirm GPS lock. The GPS module's LED (typically solid or blinking depending on model) indicates satellite connection.
+    \end{itemize}
+
+    \item \textbf{Manual Control (Optional):}
+    \begin{itemize}
+        \item Turn on the FlySky transmitter. Ensure the receiver on the ASV is powered and paired.
+        \item When connected, you can use the transmitter to manually control throttle and rudder. This is useful for testing or override.
+        \item Manual control is not required for autonomous operation but is available at any time.
+    \end{itemize}
+
+    \item \textbf{Autonomous Mission Launch:}
+    \begin{itemize}
+        \item Use iNav Configurator to upload or verify the waypoint mission.
+        \item Use iNav Configurator to verify basic telemetry such as GPS status, battery voltage, and input channel readings.
+        \item Confirm that all connections are secure and components are functioning.
+        \item Arm the vehicle using the transmitter or iNav interface. The motor should begin spinning, and the boat can now be manually operated or left to drift as designed.
+    \end{itemize}
+
+    \item \textbf{Magnetic Field Activation:}
+    \begin{itemize}
+        \item The signal generator automatically powers on with the system and begins outputting a 40 Hz sine wave.
+        \item The output is amplified and fed to the coil. If needed, use a clamp meter to verify that current is flowing.
+    \end{itemize}
+
+    \item \textbf{Monitoring:}
+    \begin{itemize}
+        \item Observe the ASV visually or via iNav telemetry if connected.
+        \item Monitor GPS LED status and waypoint progress to confirm correct operation.
+    \end{itemize}
+
+    \item \textbf{Return to Home and Shutdown:}
+    \begin{itemize}
+        \item Use the transmitter or iNav to switch to “Return to Home” mode. The ASV will autonomously return to its starting location.
+        \item Once the vehicle has returned and stopped moving, disarm it using iNav or the transmitter.
+        \item Disconnect the battery by separating the labeled leads.
+        \item Verify that all indicator LEDs are off and reseal the electronics enclosure to maintain waterproofing.
+    \end{itemize}
+\end{enumerate}
+
+Before each deployment, double-check polarity labels, confirm dry connections, and verify GPS and flight controller status.
