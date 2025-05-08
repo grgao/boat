@@ -13,7 +13,7 @@ Several improvements to our prototype's mechanical structure should be considere
   \item \textbf{Platform Material Stiffness:}  
     Our polycarbonate sheet platform flexed under load. A stiffer base, such as treated wood, aluminum, or even a thicker sheet of polycarbonate, would reduce deflection, improve stability, and better support mounted components.
   \item \textbf{Waterproofing at Fastener Joints:}  
-    To preserve disassembly ease, we avoided epoxy and ran bolts through PVC fixtures, which allowed water ingress. Future designs should apply marine epoxy or silicone sealant at critical joints, or employ O-ring-sealed fastener assemblies, to balance rigidity, waterproofing, and maintainability. The mounting holes may have to be redesigned to accommodate this, as the current design doesn't allow for easy disassembly after the epoxy is applied.
+    To preserve disassembly ease, we avoided epoxy and ran bolts through PVC fixtures, which allowed water ingress. Future designs should apply marine epoxy or silicone sealant at critical joints, or employ O-ring-sealed fastener assemblies, to balance rigidity, waterproofing, and maintainability. The mounting holes may have to be redesigned to accommodate this, as the current design doesn't allow for easy disassembly after the epoxy is applied. If the ASV is to fit in a suitcase, then the easy assembly and disassembly of the ASV is a critical component of the next design phase. 
 \end{itemize}
 
 \subsection{Electronics}
@@ -21,15 +21,32 @@ Several improvements to our prototype's mechanical structure should be considere
 Several lessons from our prototype's wiring and power distribution should guide future iterations:
 \begin{itemize}
   \item \textbf{Modular Motor Connections:} 
-    Our motors were hard-wired via fully soldered leads, making removal and replacement cumbersome. Future designs should employ waterproof, keyed connectors inside the electrical box to allow rapid motor swap-outs for maintenance or upgrades without desoldering.
-  \item \textbf{Reverse-Polarity Protection:} 
-    During our demo, the battery pack was accidentally connected backwards, risking damage to electronics and breaking our ESC. Future designs should incorporate reverse-polarity protection—using an ideal-diode IC or MOSFET-based blocker in the main power feed—to automatically guard against destructive reverse connections and prevent user error.
-  \item \textbf{Overcurrent \& Short-Circuit Safeguards:} 
+    Our motors were hard-wired via fully soldered leads, making removal and replacement cumbersome. Future designs should employ waterproof, keyed connectors inside the electrical box to allow rapid motor swap-outs for maintenance or upgrades without desoldering. We used some Anderson Powerpole connectors for the MPPT connections, but they were a bit cumbersome to use, as well as not waterproof. 
+  \item \textbf{Overcurrent \& Reverse Polarity Safeguards:} 
     We lacked fusing or electronic breakers on our high-current rails. Future designs should include appropriately rated fuses or resettable circuit breakers on each major branch (motor, batteries, electronics) to isolate faults and protect wiring and components.
+    Additionally, during our demo, the battery pack was accidentally connected backwards, risking damage to electronics and breaking our ESC. Future designs should incorporate reverse-polarity protection—using an ideal-diode IC or MOSFET-based blocker in the main power feed—to automatically guard against destructive reverse connections and prevent user error.
   \item \textbf{Power Distribution Board (PDB):} 
     Our prototype relied on wiring into a terminal junction bock, which increased bulk cabling and complicated troubleshooting. Future designs should use a custom PDB with integrated connectors, breakers, and status LEDs, with silk-screened labels marking each output (e.g.\ “Motor,” “MPPT,” “Servo”). A dedicated PCB, designed from the ground up, could consolidate off-the-shelf power components (amplifiers, signal generators, buck converters) into a single compact board, significantly reducing wiring complexity and system footprint.
+  \item \textbf{Outputting Sine Wave from SpeedyBee:}
+    If the SpeedyBee is to be used for a future iteration, it would be beneficial to test if it is possible to output the sine wave directly from the onboard ESC. The ESC outputs a 3 phase voltage to drive a brushless motor, and if the frequency of the sine wave is low enough, it may be possible to use the ESC to drive the coil directly. This would reduce the number of components needed and simplify the design. However, if an entire PCB were to be made, then this step is not as necessary. Additionally, if more motors were to be purchased, buying brushless motors would be cheaper than motors with a built in ESC, as the SpeedyBee fv405 V4 stack comes with an ESC to drive these motors. 
+  \item \textbf{Adding Second Coil to Improve GPS:}
+    The GPS module was subject to interference from the coil, which made it difficult to get a good GPS signal. With a second coil emitting a magnetic field in the opposite direction, it would be possible to cancel out the interference from the first coil. This would allow for a much better GPS signal. The second coil would need to be placed at a distance from the first coil, and it could be in series with the first coil and just wound in the opposite direction. Placing the coils in series ensures that the coils are in phase with each other, but the output would cancel out the field from the first coil.
 \end{itemize}
     
 \subsection{Software}
-
+Our iNav configuration was a basic setup, and future teams should consider utilizing the software ArduPilot, which is a more robust but complex system.
+\begin{itemize}
+  \item \textbf{Space Filling Curve Algorithm:} 
+    We used simple waypoint-following, but future teams should consider implementing a space-filling curve algorithm to optimize the ASV's path. This would allow the ASV to cover more area in less time, improving efficiency and data collection. The current system requires users to manually set waypoints, which is time-consuming and inefficient. A space-filling curve algorithm would allow the ASV to autonomously navigate a given area, reducing the need for manual waypoint setting and improving the user's experience.
+\end{itemize}
 \subsection{Testing}
+
+Testing was one of our biggest challenges, as we did not get enough time to test the ASV in the water, because by the time we were ready to test, we realized that it was likely not worth the difficulty of waterproofing the bolt connections, which would also make the handoff of the project significantly more difficult. The following are some suggestions for future teams to consider when testing the ASV:
+\begin{itemize}
+  \item \textbf{Testing the Coil:} 
+    We were unable to test the coil in the water to ensure that it actually reached the depth we calculated. Above the water the coil was able to produce a magnetic field, but our simulations showed that the field would be detectable at a depth of 80 feet underwater. Future teams should consider a methodology for testing the coil, even if it is not in the water.
+  \item \textbf{Testing in a Real Environment:} 
+    Future teams should consider testing the ASV in a controlled environment, such as a pool, before taking it out into somewhere like Lake Mendota. This would allow for easier troubleshooting and debugging of the system, as well as providing a safer environment for testing. Testing in a large lake would be beneficial to see how the ASV performs in a real environment, but it would be much more difficult to troubleshoot and debug the system.
+    
+\end{itemize}
+
