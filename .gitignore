@@ -1,3 +1,5 @@
 # Ignore generated files in Report directory
 Report/main.pdf
 Report/main.synctex.gz
+Report/main.bbl
+Report/main.blg
