@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1746817014.94691 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746817020.89923 0
+["pdflatex"] 1746817112.95779 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746817118.76148 0
   "Battery_Base.png" 1746747801 829150 f32a7cafdb45bab8f4c7381091eafe64 ""
-  "BillofMaterials.tex" 1746816612 2328 d4b9e62e6dfb04c3829dfd840398439c ""
+  "BillofMaterials.tex" 1746817108 2498 f1bd8aaaabb608495f8e1701983f1817 ""
   "C:/Users/glmg1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746771071 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/glmg1/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1746563696 24225045 46fb4ccc13c94d5e3646ef0c7b1b90fe ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc" 1256929440 2375 baa924870cfb487815765f9094cf3728 ""
@@ -257,8 +257,8 @@
   "Vout_chart.png" 1746771120 43823 1855bc13f3f93713da7a2ac60fc346fa ""
   "appendix.tex" 1746748343 1035 2a6aa2d3b2d818b620a4174b5abe7406 ""
   "c:/Personal/School/ECE 455/boat/Report/main.tex" 1746816842 4796 b9e8e8fb5dac5c30bb0defddbd67b9a8 ""
-  "main.aux" 1746817020 14529 0c80b7d175eabd30665aa6e7cb211a14 "pdflatex"
-  "main.out" 1746817016 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1746817118 14529 0c80b7d175eabd30665aa6e7cb211a14 "pdflatex"
+  "main.out" 1746817114 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1746816842 4796 b9e8e8fb5dac5c30bb0defddbd67b9a8 ""
   "power_amp.jpg" 1746764314 38137 49e6a53dd47f287e78cd685325a47fec ""
   "speedybee.png" 1746564970 1122886 56b445a19fd7013d04301b758dfa4497 ""
