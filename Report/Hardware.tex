@@ -1,8 +1,9 @@
 \section{Physical Design}
 \subsection{Frame and Flotation}
-The ASV's frame is built from two 4" PVC pipes, each 30" long, mounted in parallel to provide flotation and structural support. A block of closed-cell EPS foam is secured beneath the pipes to improve buoyancy and overall water stability, as well as introducing some rigidity to the system. Closed-cell foam was required for underwater use, as open-cell foam would absorb water and lose buoyancy. The foam was cut to fit the frame and held in place with eight (1/4") bolts.
+The ASV's frame is built from two 4" PVC pipes, each 30" long, mounted in parallel to provide flotation and structural support. A block of closed-cell EPS foam is secured between the pipes to improve buoyancy and overall water stability, as well as introducing some rigidity to the system. Closed-cell foam was required for underwater use, as open-cell foam would absorb water and lose buoyancy. The foam was cut to fit the frame and held in place with eight (1/4") bolts, along with 8 nuts and washers to distribute the load on the foam. 
 
 To calculate the buoyancy required by the ASV, we first calculated the ASV's mass to be approximately 14.4 kg. With a 25\% safety factor, our target buoyancy is 18 kg. Buoyancy in kilograms is calculated by \(\text{Buoyancy} = \text{Weight of water displaced} \times \text{Volume of submerged object}\). For our geometry, the two PVC pipes displace 15.64 L and the EPS foam displaces 19.66 L, for a total volume of 35.3 L. With a saltwater density of 1.025 kg/liter, the total buoyancy of the ASV is \(1.025 \times 35.3 = 36.2 \) kg, well above our 18 kg requirement.
+
 \subsection{Platform Structure}
 A 24" wide platform sits atop the PVC pipes, consisting of two 1/8" MDF wooden struts for rigidity and a polycarbonate sheet for mounting structural components. Polycarbonate was chosen for its strength and durability, but it is very flexible; the MDF and EPS foam serve to stiffen the base while the polycarbonate provides a strong, flat mounting surface.
 
@@ -10,7 +11,7 @@ A waterproof enclosure is mounted at the center of the platform to protect onboa
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.4\linewidth]{"Solar_Panel_Assembly.png"}
+  \includegraphics[width=0.3\linewidth]{"Solar_Panel_Assembly.png"}
   \caption{Solar panel assembly view.}
   \label{fig:solar-panel}
 \end{figure}
@@ -18,11 +19,11 @@ A waterproof enclosure is mounted at the center of the platform to protect onboa
 \subsection{Motor Mounting and Flange Design}
 The motor is mounted at the stern using a custom 3D-printed flange. The flange fits a 1" PVC shaft that connects the motor to the servo and keeps the shaft vertical during operation. To keep the motor in place, two 3D printed bushing were designed to fit the PVC shaft, which hold the motor at a constant depth. The bushing rotate above the flange, but the coefficient of friction between the two is low enough to allow the motor to rotate freely. This design choice ensures that the motor remains securely in place during operation, even in rough water conditions. The choice of a friction based bushing and flange system was chosen over a bearing system to reduce cost and complexity, as well as to allow for easy replacement of parts if needed. In Figure~\ref{fig:flange}, an assembly view of the flange can be seen, where the servo sits in a recess to protect it from the elements. The servo's axis is aligned to the PVC pipe so both rotate together.
 
-Material choice for 3D printed parts was given careful consideration to ensure the ASV is lightweight, low cost, but also resistant to wear. The 3D printed flange is made from ASA, a material known for its excellent UV resistance and mechanical properties. All other parts were made from PETG, which is a strong and durable material that maintains its structure underwater, making it suitable for the ASV's environment. The use of these materials ensures that the ASV can withstand the rigors of outdoor use while remaining lightweight and cost-effective. Structural parts were printed using 5 perimeters and 25\% gyroid infill, which provided a good balance of strength and weight, while also keeping costs relatively low. The entire project used under 750g of PETG, and around 250g of ASA, which can be purchased for around \$15. Further iterations could likely halve this number. Refer to the appendix for all isometric views of 3D printed parts.
-
 \begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.4\linewidth]{"Flange_Assembly.png"}
-  \caption{Flange assembly view.}
-  \label{fig:flange}
-\end{figure}
+    \centering
+    \includegraphics[width=0.3\linewidth]{"Flange_Assembly.png"}
+    \caption{Flange assembly view.}
+    \label{fig:flange}
+  \end{figure}
+
+Material choice for 3D printed parts was given careful consideration to ensure the ASV is lightweight, low cost, but also resistant to wear. The 3D printed flange is made from ASA, a material known for its excellent UV resistance and mechanical properties. All other parts were made from PETG, which is a strong and durable material that maintains its structure underwater, making it suitable for the ASV's environment. The use of these materials ensures that the ASV can withstand the rigors of outdoor use while remaining lightweight and cost-effective. Structural parts were printed using 5 perimeters and 25\% gyroid infill, which provided a good balance of strength and weight, while also keeping costs relatively low. The entire project used under 750g of PETG, and around 250g of ASA, which can be purchased for around \$15. Further iterations could likely halve this number. Refer to the appendix for all isometric views of 3D printed parts.
