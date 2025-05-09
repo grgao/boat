@@ -281,6 +281,8 @@ INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.st
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.code.tex
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.code.tex
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
@@ -370,24 +372,6 @@ INPUT .\BillofMaterials.tex
 INPUT .\BillofMaterials.tex
 INPUT .\BillofMaterials.tex
 INPUT BillofMaterials.tex
-INPUT .\Circuit_schem.tex
-INPUT .\Circuit_schem.tex
-INPUT .\Circuit_schem.tex
-INPUT .\Circuit_schem.tex
-INPUT Circuit_schem.tex
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\Voltage Regulator.png
-INPUT .\DC-DC converter.pdf
-INPUT .\DC-DC converter.pdf
-INPUT .\DC-DC converter.pdf
-INPUT .\DC-DC converter.pdf
-INPUT .\DC-DC converter.pdf
-INPUT .\DC-DC converter.pdf
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
@@ -428,6 +412,24 @@ INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cf
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-msb.cfg
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT .\Circuit_schem.tex
+INPUT .\Circuit_schem.tex
+INPUT .\Circuit_schem.tex
+INPUT .\Circuit_schem.tex
+INPUT Circuit_schem.tex
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\Voltage Regulator.png
+INPUT .\DC-DC converter.pdf
+INPUT .\DC-DC converter.pdf
+INPUT .\DC-DC converter.pdf
+INPUT .\DC-DC converter.pdf
+INPUT .\DC-DC converter.pdf
+INPUT .\DC-DC converter.pdf
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
 INPUT .\Hardware.tex
@@ -532,14 +534,6 @@ INPUT .\FutureWork.tex
 INPUT .\FutureWork.tex
 INPUT .\FutureWork.tex
 INPUT FutureWork.tex
-INPUT .\references.tex
-INPUT .\references.tex
-INPUT .\references.tex
-INPUT .\references.tex
-INPUT references.tex
-INPUT .\main.bbl
-INPUT .\main.bbl
-INPUT main.bbl
 INPUT .\appendix.tex
 INPUT .\appendix.tex
 INPUT .\appendix.tex

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.6)  9 MAY 2025 13:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -731,6 +731,26 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip75
+\LTright=\skip76
+\LTpre=\skip77
+\LTpost=\skip78
+\LTchunksize=\count340
+\LTcapwidth=\dimen284
+\LT@head=\box84
+\LT@firsthead=\box85
+\LT@foot=\box86
+\LT@lastfoot=\box87
+\LT@gbox=\box88
+\LT@cols=\count341
+\LT@rows=\count342
+\c@LT@tables=\count343
+\c@LT@chunks=\count344
+\LT@p@ftn=\toks54
+)
+Class scrartcl Info: longtable captions redefined on input line 58.
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geometric.code.tex
@@ -754,65 +774,65 @@ File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box84
-\pgfnodeparttwobox=\box85
-\pgfnodepartthreebox=\box86
-\pgfnodepartfourbox=\box87
-\pgfnodeparttwentybox=\box88
-\pgfnodepartnineteenbox=\box89
-\pgfnodeparteighteenbox=\box90
-\pgfnodepartseventeenbox=\box91
-\pgfnodepartsixteenbox=\box92
-\pgfnodepartfifteenbox=\box93
-\pgfnodepartfourteenbox=\box94
-\pgfnodepartthirteenbox=\box95
-\pgfnodeparttwelvebox=\box96
-\pgfnodepartelevenbox=\box97
-\pgfnodeparttenbox=\box98
-\pgfnodepartninebox=\box99
-\pgfnodeparteightbox=\box100
-\pgfnodepartsevenbox=\box101
-\pgfnodepartsixbox=\box102
-\pgfnodepartfivebox=\box103
+\pgfnodepartlowerbox=\box89
+\pgfnodeparttwobox=\box90
+\pgfnodepartthreebox=\box91
+\pgfnodepartfourbox=\box92
+\pgfnodeparttwentybox=\box93
+\pgfnodepartnineteenbox=\box94
+\pgfnodeparteighteenbox=\box95
+\pgfnodepartseventeenbox=\box96
+\pgfnodepartsixteenbox=\box97
+\pgfnodepartfifteenbox=\box98
+\pgfnodepartfourteenbox=\box99
+\pgfnodepartthirteenbox=\box100
+\pgfnodeparttwelvebox=\box101
+\pgfnodepartelevenbox=\box102
+\pgfnodeparttenbox=\box103
+\pgfnodepartninebox=\box104
+\pgfnodeparteightbox=\box105
+\pgfnodepartsevenbox=\box106
+\pgfnodepartsixbox=\box107
+\pgfnodepartfivebox=\box108
 ))) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen284
+\arrowsize=\dimen285
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 110.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 111.
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-Package scrbase Info: activating english \abstractname on input line 110.
-Package scrbase Info: activating english \partname on input line 110.
-Package scrbase Info: activating english \figurename on input line 110.
-Package scrbase Info: activating english \tablename on input line 110.
-Package scrbase Info: activating english \contentsname on input line 110.
-Package scrbase Info: activating english \listfigurename on input line 110.
-Package scrbase Info: activating english \listtablename on input line 110.
-Package scrbase Info: activating english \refname on input line 110.
-Package scrbase Info: activating english \indexname on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+Package scrbase Info: activating english \abstractname on input line 111.
+Package scrbase Info: activating english \partname on input line 111.
+Package scrbase Info: activating english \figurename on input line 111.
+Package scrbase Info: activating english \tablename on input line 111.
+Package scrbase Info: activating english \contentsname on input line 111.
+Package scrbase Info: activating english \listfigurename on input line 111.
+Package scrbase Info: activating english \listtablename on input line 111.
+Package scrbase Info: activating english \refname on input line 111.
+Package scrbase Info: activating english \indexname on input line 111.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -847,20 +867,20 @@ Package scrbase Info: activating english \indexname on input line 110.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 110.
-Package microtype Info: Applying patch `item' on input line 110.
-Package microtype Info: Applying patch `toc' on input line 110.
-Package microtype Info: Applying patch `eqnum' on input line 110.
-Package microtype Info: Applying patch `footnote' on input line 110.
-Package microtype Info: Applying patch `verbatim' on input line 110.
-LaTeX Info: Redefining \microtypesetup on input line 110.
+LaTeX Info: Redefining \microtypecontext on input line 111.
+Package microtype Info: Applying patch `item' on input line 111.
+Package microtype Info: Applying patch `toc' on input line 111.
+Package microtype Info: Applying patch `eqnum' on input line 111.
+Package microtype Info: Applying patch `footnote' on input line 111.
+Package microtype Info: Applying patch `verbatim' on input line 111.
+LaTeX Info: Redefining \microtypesetup on input line 111.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 110.
+LaTeX Info: Redefining \showhyphens on input line 111.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -868,17 +888,17 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count340
-\scratchdimen=\dimen285
-\scratchbox=\box104
-\nofMPsegments=\count341
-\nofMParguments=\count342
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count343
-\MPscratchDim=\dimen286
-\MPnumerator=\count344
-\makeMPintoPDFobject=\count345
-\everyMPtoPDFconversion=\toks55
+\scratchcounter=\count345
+\scratchdimen=\dimen286
+\scratchbox=\box109
+\nofMPsegments=\count346
+\nofMParguments=\count347
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count348
+\MPscratchDim=\dimen287
+\MPnumerator=\count349
+\makeMPintoPDFobject=\count350
+\everyMPtoPDFconversion=\toks56
 ) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -887,8 +907,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 110.
-Package hyperref Info: Link coloring OFF on input line 110.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 111.
+Package hyperref Info: Link coloring OFF on input line 111.
  (main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -900,14 +920,14 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 110.
+(scrartcl)           before \begin{document} on input line 111.
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count346
+\BKM@id=\count351
 ))
-\c@lstlisting=\count347
+\c@lstlisting=\count352
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -922,16 +942,53 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) (BillofMaterials.tex) (Circuit_schem.tex
+) (BillofMaterials.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 \section
-            {Circuit Schematics} [1]
-<Voltage Regulator.png, id=20, 1113.15875pt x 430.60875pt>
+l.43 
+      [1]) (Circuit_schem.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+<Voltage Regulator.png, id=25, 1113.15875pt x 430.60875pt>
 File: Voltage Regulator.png Graphic file (type png)
 <use Voltage Regulator.png>
 Package pdftex.def Info: Voltage Regulator.png  used on input line 6.
@@ -944,7 +1001,7 @@ Overfull \hbox (11.31038pt too wide) in paragraph at lines 6--7
 
 
 pdfTeX warning: pdflatex (file ./DC-DC converter.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<DC-DC converter.pdf, id=23, 794.97pt x 614.295pt>
+<DC-DC converter.pdf, id=28, 794.97pt x 614.295pt>
 File: DC-DC converter.pdf Graphic file (type pdf)
 <use DC-DC converter.pdf>
 Package pdftex.def Info: DC-DC converter.pdf  used on input line 13.
@@ -952,78 +1009,44 @@ Package pdftex.def Info: DC-DC converter.pdf  used on input line 13.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2
+ [3
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.17 F
-      ig. \ref{fig:DC-DC Converter} is the second of our two designed circui... <./Voltage Regulator.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 17.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
- (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)) (Hardware.tex [3
+      ig. \ref{fig:DC-DC Converter} is the second of our two designed circui... <./Voltage Regulator.png>]) (Hardware.tex [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.6 
     {C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./DC-DC converter.pdf>]
-<Solar_Panel_Assembly.png, id=57, 2556.55125pt x 3308.36pt>
+<Solar_Panel_Assembly.png, id=61, 2556.55125pt x 3308.36pt>
 File: Solar_Panel_Assembly.png Graphic file (type png)
 <use Solar_Panel_Assembly.png>
 Package pdftex.def Info: Solar_Panel_Assembly.png  used on input line 14.
 (pdftex.def)             Requested size: 129.00269pt x 166.89165pt.
- [4
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.21 
       <./Solar_Panel_Assembly.png>]
-<Flange_Assembly.png, id=67, 2556.55125pt x 3308.36pt>
+<Flange_Assembly.png, id=71, 2556.55125pt x 3308.36pt>
 File: Flange_Assembly.png Graphic file (type png)
 <use Flange_Assembly.png>
 Package pdftex.def Info: Flange_Assembly.png  used on input line 24.
 (pdftex.def)             Requested size: 129.00269pt x 166.89165pt.
-) (Electrical.tex [5
+) (Electrical.tex [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.5 
-     <./Flange_Assembly.png>] [6]
+     <./Flange_Assembly.png>] [7]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 25.
  (C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Signal Generator.jpg, id=85, 681.54625pt x 425.59pt>
+<Signal Generator.jpg, id=89, 681.54625pt x 425.59pt>
 File: Signal Generator.jpg Graphic file (type jpg)
 <use Signal Generator.jpg>
 Package pdftex.def Info: Signal Generator.jpg  used on input line 36.
@@ -1036,8 +1059,8 @@ Overfull \hbox (25.66183pt too wide) in paragraph at lines 36--37
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7{C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-<power_amp.jpg, id=96, 467.7475pt x 369.38pt>
+ [8{C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+<power_amp.jpg, id=100, 467.7475pt x 369.38pt>
 File: power_amp.jpg Graphic file (type jpg)
 <use power_amp.jpg>
 Package pdftex.def Info: power_amp.jpg  used on input line 45.
@@ -1045,13 +1068,13 @@ Package pdftex.def Info: power_amp.jpg  used on input line 45.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.49 F
       ig. \ref{fig:Power Amp} shows the Power Amplifier board we bought and ... <./Signal Generator.jpg>]
-<speedybee.png, id=103, 1657.19125pt x 3036.34375pt>
+<speedybee.png, id=107, 1657.19125pt x 3036.34375pt>
 File: speedybee.png Graphic file (type png)
 <use speedybee.png>
 Package pdftex.def Info: speedybee.png  used on input line 54.
@@ -1059,7 +1082,7 @@ Package pdftex.def Info: speedybee.png  used on input line 54.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9
+ [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1076,18 +1099,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Underfull \vbox (badness 1194) has occurred while \output is active []
 
- [10
+ [11
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.8 
      <./speedybee.png>]
-<Magnetic_Moment.png, id=119, 2312.64pt x 1288.0622pt>
+<Magnetic_Moment.png, id=123, 2312.64pt x 1288.0622pt>
 File: Magnetic_Moment.png Graphic file (type png)
 <use Magnetic_Moment.png>
 Package pdftex.def Info: Magnetic_Moment.png  used on input line 34.
 (pdftex.def)             Requested size: 344.005pt x 191.58934pt.
- [11] [12
+ [12] [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1101,13 +1124,13 @@ Overfull \hbox (0.92847pt too wide) in paragraph at lines 95--96
 []\T1/lmr/bx/n/10.95 (-20) Disable pitch and roll mix-ing \T1/lmr/m/n/10.95 (-20) by set-ting these in-puts to zero in the \T1/lmtt/m/n/10.95 mixTable()
  []
 
-[13]) (Operating Instructions.tex [14]) (Troubleshooting.tex [15]
-<Vout_chart.png, id=192, 752.8125pt x 564.1075pt>
+[14]) (Operating Instructions.tex [15]) (Troubleshooting.tex [16]
+<Vout_chart.png, id=196, 752.8125pt x 564.1075pt>
 File: Vout_chart.png Graphic file (type png)
 <use Vout_chart.png>
 Package pdftex.def Info: Vout_chart.png  used on input line 7.
 (pdftex.def)             Requested size: 227.82124pt x 170.71652pt.
- [16
+ [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1115,33 +1138,28 @@ l.12 \subsection
                 {Motor Operation and Grounding} <./Vout_chart.png>]) (FutureWork.tex
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
- [17] [18] [19]) (references.tex (main.bbl
-
-LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
-               before end of `thebibliography' environment on input line 24.
-
-)) [20] [21] (appendix.tex
-<Battery_Base.png, id=230, 3308.36pt x 2556.55125pt>
+ [18] [19] [20]) [21] (appendix.tex
+<Battery_Base.png, id=229, 3308.36pt x 2556.55125pt>
 File: Battery_Base.png Graphic file (type png)
 <use Battery_Base.png>
 Package pdftex.def Info: Battery_Base.png  used on input line 5.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Clamp.png, id=231, 3308.36pt x 2556.55125pt>
+<Clamp.png, id=230, 3308.36pt x 2556.55125pt>
 File: Clamp.png Graphic file (type png)
 <use Clamp.png>
 Package pdftex.def Info: Clamp.png  used on input line 12.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Motor_to_PVC.png, id=232, 3308.36pt x 2556.55125pt>
+<Motor_to_PVC.png, id=231, 3308.36pt x 2556.55125pt>
 File: Motor_to_PVC.png Graphic file (type png)
 <use Motor_to_PVC.png>
 Package pdftex.def Info: Motor_to_PVC.png  used on input line 19.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Perfboard_Mounting.png, id=233, 3308.36pt x 2556.55125pt>
+<Perfboard_Mounting.png, id=232, 3308.36pt x 2556.55125pt>
 File: Perfboard_Mounting.png Graphic file (type png)
 <use Perfboard_Mounting.png>
 Package pdftex.def Info: Perfboard_Mounting.png  used on input line 26.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Servo_to_PVC.png, id=234, 3308.36pt x 2556.55125pt>
+<Servo_to_PVC.png, id=233, 3308.36pt x 2556.55125pt>
 File: Servo_to_PVC.png Graphic file (type png)
 <use Servo_to_PVC.png>
 Package pdftex.def Info: Servo_to_PVC.png  used on input line 33.
@@ -1182,17 +1200,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36314 strings out of 474486
- 756435 string characters out of 5743756
+ 36385 strings out of 474486
+ 757285 string characters out of 5743756
  2001542 words of memory out of 5000000
- 57753 multiletter control sequences out of 15000+600000
+ 57828 multiletter control sequences out of 15000+600000
  616870 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,8n,107p,10940b,2829s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (24 pages, 4334425 bytes).
+Output written on main.pdf (24 pages, 4336838 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
+ 425 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
  36131 words of extra memory for PDF output out of 42996 (max. 10000000)
 

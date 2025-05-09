@@ -8,7 +8,7 @@ A critical component of the ASV's system is the electromagnetic coil, which gene
 
 The script first defines the coil geometry and material parameters, such as the number of turns, loop dimensions, wire size, and frequency. The inductance of the rectangular loop is calculated with a standard formula that accounts for  the loop's physical dimensions and number of turns. The resistance is determined from the total wire length and resistivity, while the impedance is computed at the operating frequency. The magnetic moment, which sets the strength of the magnetic field, is also calculated as $m = NIA$.
 
-Once the magnetic moment of the coil is determined, the effective range is estimated using a model provided by Professor Strachen. We must first make some assumptions about the model. We model the coil as a magnetic dipole, and we assume that the underwater AUV has a field strength threshold of 2 nT, which is a reasonable value that the AUV teams were aiming for. The effective range is then calculated using the formula:
+Once the magnetic moment of the coil is determined, the effective range is estimated using a model provided by Professor Strachen. We must first make some assumptions about the model. We model the coil as a magnetic dipole, and we assume that the underwater AUV has a field strength threshold of 0.2 nT, which is a reasonable value that the AUV teams were aiming for. The effective range is then calculated using the formula:
 
 \begin{equation}
 r = \left( \frac{\mu_0 m}{2 \pi B_r} e^{-\alpha r} \right)^{1/3}
