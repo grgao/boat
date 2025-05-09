@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1746771888.52285 "main.aux" "main.bbl" "main" 1746772010.39294 0
+["bibtex main"] 1746809218.76711 "main.aux" "main.bbl" "main" 1746809226.92993 0
   "./ref.bib" 1746564970 2411 d2afdeec8009ff2ceb6581545bb97795 ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1746772008 17496 46f12bbc8a0a7e102a04fe0d4c7cc551 "pdflatex"
+  "main.aux" 1746809224 16627 4ee54d64c5a1539293b18db37a6e6e61 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1746772002.12212 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746772010.39422 0
+["pdflatex"] 1746809219.64152 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746809226.93063 0
   "Battery_Base.png" 1746747801 829150 f32a7cafdb45bab8f4c7381091eafe64 ""
   "BillofMaterials.tex" 1746564970 162 74ba19201afbda1e54018859ed70c004 ""
   "C:/Users/glmg1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746771071 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -247,7 +247,7 @@
   "Clamp.png" 1746748241 645689 b47e30a922b64d326eb4d46e88c67c06 ""
   "Coding.tex" 1746763456 15694 bbf77b5a88904af7b3774a619a0ed48a ""
   "DC-DC converter.pdf" 1746728413 111609 bbdcfe66ebbb0f608c077d35e98c4c22 ""
-  "Electrical.tex" 1746772009 8268 33748ed711127bc0c37df526a8d30d10 ""
+  "Electrical.tex" 1746809208 8011 52703656ad6a1cfdba5793e3dc32a646 ""
   "Flange_Assembly.png" 1746654995 746288 2e63951ca0f8c48ffd3a37124c167004 ""
   "FutureWork.tex" 1746758800 8339 fb3623c2d54d77139409c3b9615915c1 ""
   "Hardware.tex" 1746767910 4547 7779e6dbe6e229168840df3cb511eed5 ""
@@ -255,18 +255,17 @@
   "Motor_to_PVC.png" 1746748197 1136665 e71efc91865cea7ee42cb58d4b99a4f8 ""
   "Operating Instructions.tex" 1746667713 3168 f119d76b7385d152ae601568a13e16e6 ""
   "Perfboard_Mounting.png" 1746747801 429680 7e6b0bd61b923a1c94a59613f92dc31f ""
-  "Power_Diagram.png" 1746764902 1019471 80ac54115f1c0af25b15c85d0000fcda ""
   "Servo_to_PVC.png" 1746748218 757900 452bf9981c0b6e7e13be00a8f2a3bded ""
   "Signal Generator.jpg" 1746764314 49266 2d39d739aaba5ea09dd4e2eb3089cd1a ""
   "Solar_Panel_Assembly.png" 1746644891 441574 f4b9cd5a74cae832ae2d50d0e432cfbd ""
-  "Troubleshooting.tex" 1746771120 4422 3730ce8e4851ba9ac08e5cbc1c8a0a9a ""
+  "Troubleshooting.tex" 1746809208 4461 2aba12e857a376e2294d17593f0ed93d ""
   "Voltage Regulator.png" 1746729432 18800 16c528ae59c866e7d3fa7fc7ef513f42 ""
   "Vout_chart.png" 1746771120 43823 1855bc13f3f93713da7a2ac60fc346fa ""
   "appendix.tex" 1746748343 1035 2a6aa2d3b2d818b620a4174b5abe7406 ""
   "c:/Personal/School/ECE 455/boat/Report/main.tex" 1746771120 4755 dddc685118856f493880af145fa0ab0f ""
-  "main.aux" 1746772008 17496 46f12bbc8a0a7e102a04fe0d4c7cc551 "pdflatex"
-  "main.bbl" 1746771889 901 628a2a8c68e066122d1514411e0b8455 "bibtex main"
-  "main.out" 1746772004 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1746809224 16627 4ee54d64c5a1539293b18db37a6e6e61 "pdflatex"
+  "main.bbl" 1746809219 901 628a2a8c68e066122d1514411e0b8455 "bibtex main"
+  "main.out" 1746809221 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1746771120 4755 dddc685118856f493880af145fa0ab0f ""
   "power_amp.jpg" 1746764314 38137 49e6a53dd47f287e78cd685325a47fec ""
   "references.tex" 1746564970 48 1287a31b52d977c11dd8c225a3fedf96 ""
