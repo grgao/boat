@@ -23,12 +23,13 @@ m = N \times I \times A
 where:
 \begin{itemize}
     \item \( N \) is the number of turns in the coil,
-    \item \( I \) is the RMS current through the coil,
+    \item \( I \) is the peak current through the coil,
     \item \( A \) is the area of the loop.
 \end{itemize}
 
+Our goal for a magnetic moment was a value of \SI{50}{\ampere \meter^2}, which would give a range of around 27m underwater. To achieve this, we used a coil with 78 turns, an area of of \SI{0.46}{\meter^2}, and a peak current of \SI{1.6}{\ampere}. The coil was made from 18 AWG copper wire, and had a calculated magnetic moment of \SI{59}{\ampere \meter^2}.
 
-An issue we ran into when trying to provide ample power to our coil to create our desired magnetic moment was how we were going to produce our sine wave. Initially, we wanted to create a sine wave with a modified PWM pin on the Raspberry Pi. However, the output ended up being incredibly noisy and, even after filtering, wasn't super clean. After that solution didn't work, we tried the audio jack, which didn't work for similar reasons, and finally, we tried a DAC, but the noise level was at the same amplitude we wanted to produce our sine wave at. With little time left, we found the best solution was to purchase a signal generator board and then send the low-frequency sine wave through a power amplifier that could bump up the sine wave to a larger amplitude. This allowed for out-of-the-box options we knew would work and at a cheap cost. However, since this was a last-minute solution, we never fully tested the capabilities of the Signal generator in conjunction with the power amplifier, but this is a brief overview of what we would expect the working solution to look like.
+An issue we ran into when trying to provide ample power to our coil was the method for producing our sine wave. Initially, we wanted to create a sine wave with a modified PWM pin on the Raspberry Pi. However, the output ended up being incredibly noisy and, even after filtering, wasn't super clean. After that solution didn't work, we tried the audio jack, which didn't work for similar reasons, and finally, we tried a DAC, but the noise level was at the same amplitude we wanted to produce our sine wave at. With little time left, we found the best solution was to purchase a signal generator board and then send the low-frequency sine wave through a power amplifier that could bump up the sine wave to a larger amplitude. This allowed for out-of-the-box options we knew would work and at a cheap cost. However, since this was a last-minute solution, we never fully tested the capabilities of the Signal generator in conjunction with the power amplifier, but this is a brief overview of what we would expect the working solution to look like.
 
 \begin{figure}[H]
     \centering

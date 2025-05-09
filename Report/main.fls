@@ -459,7 +459,6 @@ INPUT .\Electrical.tex
 INPUT .\Electrical.tex
 INPUT .\Electrical.tex
 INPUT Electrical.tex
-INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
@@ -495,6 +494,14 @@ INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT .\Magnetic_Moment.png
+INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
@@ -600,5 +607,7 @@ INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbx1
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
+INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Users\glmg1\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb

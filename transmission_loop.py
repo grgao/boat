@@ -51,7 +51,7 @@ wires = {
 }
 
 # We want to minimize power and weight, so minimize current 1st, then number of turns
-N = 51 # Coil has been wound with 78 turns, need to solder for more. 
+N = 78 # Coil has been wound with 78 turns, need to solder for more. 
 I = 1.63  # Peak AC current, divide by sqrt2 for RMS current
 
 width = 2 * FEET_TO_METER # 2 ft loop
@@ -94,6 +94,8 @@ for wire_type in wires:
 
     # Print results
     print(f"Magnetic moment (m): {magnetic_moment:.2f} Am^2")
+    print(f"Area (A): {A:.6f} m^2")
+
     print(f"Resistance (R): {R:.6f} Ohms")
     print(f"Inductance (L): {L:.6f} H")
     print(f"Impedance magnitude (|Z|): {magZ:.6f} Ohms")

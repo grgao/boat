@@ -1,190 +1,40 @@
 \section{Coding}
+\label{sec:Coding}
 
-In this section, we will include the programming aspects of our design.
+In this section, we will include the programming aspects of our design. All code is available in the GitHub repository at \url{https://github.com/grgao/boat/tree/main}. 
 
-% Commenting out all of the buoyancy calculations as they are not relevant to the final report.
+\subsection{Electromagnetic Coil Modeling and Range Calculations}
+A critical component of the ASV's system is the electromagnetic coil, which generates a low-frequency magnetic field for underwater detection and tracking. To optimize the coil design and predict its performance, a Python-based simulation was developed. This code calculates the electrical properties of a rectangular coil and simulates the resulting magnetic moment, which is then used to calculate an effective range. 
 
-% \subsection{Buoyancy Calculations}
+The script first defines the coil geometry and material parameters, such as the number of turns, loop dimensions, wire size, and frequency. The inductance of the rectangular loop is calculated with a standard formula that accounts for  the loop's physical dimensions and number of turns. The resistance is determined from the total wire length and resistivity, while the impedance is computed at the operating frequency. The magnetic moment, which sets the strength of the magnetic field, is also calculated as $m = NIA$.
 
-% A crucial aspect of the RMS Titanic 2 autonomous surface vehicle is its ability to remain buoyant and stable while carrying all mission-critical components, including the electromagnetic coil of wire, electronic components, batteries, and solar panel. To ensure this, a comprehensive structural and buoyancy analysis was performed using a Python-based workflow.
-
-% \subsubsection{Pipe and Material Specifications}
-
-% The vessel's primary flotation is provided by two large-diameter PVC pipes, each with an inner diameter of 4 inches and a length of 30 inches.
-% The density of polycarbonate (1210 kg/m$^3$) and seawater (1025 kg/m$^3$) were used as reference values for calculations.
-% The mass of each PVC pipe was calculated using the manufacturer's specified weight per foot, converted to metric units for consistency.
-
-% \subsubsection{Component Mass Budget}
-
-% The total system weight includes all major components: electromagnetic coil (2.95 kg), servo, propulsion motor, LiFePO$_4$ battery, PVC housing, and a 6 kg solar panel.
-% A 5\% contingency margin was added to account for mounting hardware, fasteners, and unforeseen additions.
-
-% \subsubsection{The Analysis}
-% The internal volume of each PVC pipe was computed and multiplied by the number of pipes to determine the total displaced volume.
-% The buoyant force was calculated as the product of displaced seawater volume and seawater density.
-% The total required buoyancy was set to the system's weight multiplied by a 1.25 safety factor, ensuring a 25\% margin for dynamic loads and environmental uncertainties.
-% The difference between required buoyancy and the buoyancy provided by the PVC pipes determined the additional lift needed from closed-cell foam---we use Pink foam.
-
-% \subsubsection{Foam Material Evaluation}
-
-% Several foam options were considered, including marine-grade polyethylene, polyurethane, PVC foam, syntactic foam, and pink EPS foam- the latter being the most accessible and convenient whilst maintaining the properties required for floatation
-% For each material, the required foam volume and example thickness (assuming a 30$\times$15 cm base area) were calculated, aiding in rapid material selection and prototyping.
-
-% \subsubsection{Summary of Results}
-
-% The analysis provided a clear breakdown of the vessel's mass, the buoyancy contribution of the PVC pipes, and the precise amount of additional foam required for safe operation.
-% This approach allowed for iterative design, supporting quick assessment of the impact of component changes or material substitutions on vessel stability.
-% The resulting design ensures that the ASV is robust and is capable of supporting all hardware without risk of sinking or instability, even under varying environmental conditions.
-% This structural and buoyancy analysis was essential for validating the design of the RMS Titanic 2 platform, ensuring reliable operation during autonomous missions in coastal waters.
-
-% \subsubsection{Python Code for Buoyancy Analysis}
-% \begin{verbatim}
-%     import math
-    
-%     # --- MATERIAL PROPERTIES ---
-%     POLYCARB_DENSITY = 1210      # kg/m³, density of polycarbonate
-%     SALTWATER_DENSITY = 1025     # kg/m³, typical density of seawater
-    
-%     # --- PIPE SPECIFICATIONS ---
-%     NUM_PIPES = 2
-%     INNER_DIAMETER_IN = 4.0      # Inner diameter in inches
-%     LENGTH_IN = 30               # Length in inches
-%     WEIGHT_PER_FOOT_PVC = 2.01
-    
-%     def in_to_m(inches):
-%         """Convert inches to meters."""
-%         return inches * 0.0254
-    
-%     # --- COMPONENT WEIGHTS (UPDATED WITH SOLAR PANEL) ---
-%     components = {
-%         'em_coil': 2.95,         # Electromagnetic coil
-%         'servo': 0.068,          # Servo motor
-%         'motor': 0.500,          # Propulsion motor
-%         'battery': 1.80,         # LiFePO4 battery
-%         'small_pvc': 0.227,      # PVC housing
-%         'solar_panel': 6.00      # 6kg solar panel
-%     }
-    
-%     # --- CALCULATE PIPE MASS USING INNER DIAMETER ---
-%     inner_radius = in_to_m(INNER_DIAMETER_IN) / 2
-%     length_m = in_to_m(LENGTH_IN)
-%     single_pipe_volume = math.pi * (inner_radius ** 2) * length_m
-%     total_pipe_volume = single_pipe_volume * NUM_PIPES
-    
-%     pipe_mass = (WEIGHT_PER_FOOT_PVC * LENGTH_IN / 12) # add lb to kg conversion
-    
-%     # --- TOTAL WEIGHT CALCULATION ---
-%     component_sum = sum(components.values())
-%     contingency = component_sum * 0.05  # 5% contingency
-%     total_weight = component_sum + pipe_mass + contingency
-    
-%     # --- BUOYANCY ANALYSIS ---
-%     displaced_volume = total_pipe_volume
-%     buoyant_force = displaced_volume * SALTWATER_DENSITY
-%     safety_margin = 1.25  # 25% safety factor
-%     required_buoyancy = total_weight * safety_margin
-%     required_foam = required_buoyancy - buoyant_force
-    
-%     # --- FOAM MATERIAL OPTIONS (INCLUDING PINK EPS FOAM) ---
-%     # Buoyancy is equal to F= Rho * V * g;
-%     # Weight of item m = density*v
-%     # effective bouyant force Fb = F - g*m
-    
-%     foams = {
-%         'Polyethylene': 0.90,    # Marine foam
-%         'Polyurethane': 0.85,    # Marine foam
-%         'PVC Foam': 0.52,        # Structural
-%         'Syntactic Foam': 0.88,  # Deep water
-%         'Pink EPS Foam': 0.98    #  lb/ft³ density (~32 kg/m³)2
-%     }
-    
-%     print("[BUOYANCY ANALYSIS]")
-%     print(f"Polycarbonate Pipe Mass: {pipe_mass:.2f} kg")
-%     print(f"Total Vessel Weight: {total_weight:.2f} kg")
-%     print(f"Pipe Buoyancy Contribution: {buoyant_force:.2f} kg")
-%     print(f"Total Buoyancy Required: {required_buoyancy:.2f} kg")
-%     print(f"Required Foam Buoyancy: {required_foam:.2f} kg\n")
-    
-%     print("[FOAM VOLUME REQUIREMENTS]")
-%     print("Material         | Volume Needed (liters) | Example Thickness (cm)")
-%     print("-----------------|------------------------|-----------------------")
-    
-%     for material, buoyancy in foams.items():
-%         volume = required_foam / buoyancy if required_foam > 0 else 0
-%         thickness = (volume * 1000) / (30 * 15)  # 30x15cm base area
-%         print(f"{material:16} | {volume:8.1f}              | {thickness:5.1f}")
-%     \end{lstlisting}
-    
-% \end{verbatim}
-
-\subsection{Electromagnetic Coil Modeling and Magnetic Field Calculations}
-A critical component of the RMS Titanic 2 system is the electromagnetic coil, which generates a low-frequency magnetic field for underwater detection and tracking. To optimize the coil design and predict its performance, a Python-based simulation was developed. This code calculates the electrical properties of a rectangular coil and simulates the resulting magnetic field at a specified observation point, using both analytical and numerical methods.
-
-\subsubsection{Inductance and Electrical Properties Calculation}
-The script first defines the coil geometry and material parameters, such as the number of turns ($N$), loop dimensions ($W$, $H$), wire diameter ($d$), and frequency ($f$). The inductance of the rectangular loop is calculated with a standard formula that accounts for the loop's physical dimensions and number of turns. The resistance is determined from the total wire length and resistivity, while the impedance is computed at the operating frequency. The magnetic moment, which sets the strength of the magnetic field, is also calculated as $m = NIA$.
-
-\subsubsection{Magnetic Field Simulation}
-The code then estimates the magnetic field at a specified observation point (typically 1 meter above the loop center) using two methods:
-
-\begin{verbatim}
-    # Magpylib Simulation (most accurate)
-    if 'magpy' in globals():
-        loop = magpy.current.Loop(
-            current=N*I,
-            diameter=np.sqrt(W**2 + H**2),
-            position=(W/2, H/2, 0)
-        )
-        results['Magpylib'] = loop.getB(obs_point)
-\end{verbatim}
-
-\begin{verbatim}
-    # Biot-Savart Numerical Integration
-num_segments = 100  # Per side
-dl = W/num_segments
-B_bs = np.zeros(3)
-
-for side in ['bottom', 'right', 'top', 'left']:
-    for i in range(num_segments):
-        if side == 'bottom':
-            x = i*dl
-            segment = np.array([x, 0, 0])
-            dvec = np.array([dl, 0, 0])
-        elif side == 'right':
-            y = i*dl
-            segment = np.array([W, y, 0])
-            dvec = np.array([0, dl, 0])
-        elif side == 'top':
-            x = W - i*dl
-            segment = np.array([x, H, 0])
-            dvec = np.array([-dl, 0, 0])
-        else:  # left
-            y = H - i*dl
-            segment = np.array([0, y, 0])
-            dvec = np.array([0, -dl, 0])
-        
-        r = obs_point - (segment + dvec/2)
-        r_mag = np.linalg.norm(r)
-        B_bs += np.cross(dvec, r) / r_mag**3
-
-B_bs *= (4*np.pi*1e-7) * N*I / (4*np.pi)
-print("Biot-Savart B-field at observation point:", B_bs)
-
-\end{verbatim}
-
-\subsubsection{Output and Design Optimization}
-The script prints all key electrical parameters, including magnetic moment, resistance, inductance, impedance, and required voltage for the desired current. It then outputs the magnetic field at the observation point for both calculation methods, supporting direct comparison and validation. If the magnetic moment is below a target threshold, the code suggests how to scale up current, turns, or area to achieve the desired performance.
-
-\subsubsection{Engineering Value}
-This modeling workflow enables rapid and accurate iteration of coil designs, balancing detection range, power consumption, and manufacturability. By integrating both analytical and numerical field calculations, the system ensures robust magnetic field generation tailored to the operational requirements of the RMS Titanic 2 platform.
-
-\subsection{B-Field Coding}
-Created a function that performs a comprehensive evaluation of square electromagnetic coils by analyzing various wire gauges and turn counts to identify feasible coil configurations that meet specified magnetic moment targets. Given a coil side length and a target magnetic moment range, the function calculates key electrical parameters including resistance, inductance, current requirements, and voltage ranges for each configuration. It utilizes a database of American Wire Gauge (AWG) specifications, incorporating wire diameter, resistance per meter, and maximum allowable current to ensure operational safety and efficiency. By iterating over practical turn counts and verifying current constraints, the analysis provides a set of viable coil designs optimized for magnetic performance and manufacturability. This systematic approach facilitates informed decision-making in coil design, balancing physical dimensions and electrical characteristics to achieve desired magnetic moments within practical power and thermal limits. We ultimately did not use this- but we mention this here as something we had tried.
+Once the magnetic moment of the coil is determined, the effective range is estimated using a model provided by Professor Strachen. We must first make some assumptions about the model. We model the coil as a magnetic dipole, and we assume that the underwater AUV has a field strength threshold of 2 nT, which is a reasonable value that the AUV teams were aiming for. The effective range is then calculated using the formula:
 
 \begin{equation}
-V=\oint \overrightarrow{E}\cdot d\overrightarrow{l}  
-\label{MyEquation}
+r = \left( \frac{\mu_0 m}{2 \pi B_r} e^{-\alpha r} \right)^{1/3}
+\end{equation}
+\begin{equation}
+\alpha_s = \sqrt{\pi \cdot f \cdot \mu \cdot \sigma_W}
 \end{equation}
 
+where:
+\begin{itemize}
+    \item \( \mu_0 \) is the permeability of free space,
+    \item \( m \) is the magnetic moment of the coil,
+    \item \( B_r \) is the field strength threshold,
+    \item \( \alpha \) is the attenuation coefficient given by the skin effect,
+    \item \( f \) is the frequency of the signal,
+    \item \( \mu \) is the permeability of the medium,
+    \item \( \sigma_W \) is the conductivity of water, \SI{4 }{\siemens \per \meter}.
+\end{itemize}
+
+The effective range of different magnetic moments can be seen by Figure~\ref{fig:Effective Range}. With our magnetic moment of 59, we have an effective range of around 30 meters. The reason for a skin depth coefficient is due to the skin effect, which is a phenomenon where the current density decreases closer to the wires surface. This results in the magnetic field decaying exponentially with distance. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Magnetic_Moment.png}
+    \caption{Effective range of the coil in water.}
+\label{fig:Effective Range}
+\end{figure}
 \subsection{iNav Configuration}
 
 The SpeedyBee F405 V4 flight controller was flashed with iNav 7 firmware to enable GPS-based return-to-home (RTH) functionality and manual control. iNav 7 was selected because of its improved support for surface vehicles, enhanced GPS navigation features, and full compatibility with the SpeedyBee F405 V4 without requiring custom firmware builds.
