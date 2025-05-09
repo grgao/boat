@@ -2,118 +2,120 @@
 
 In this section, we will include the programming aspects of our design.
 
-\subsection{Buoyancy Calculations}
+% Commenting out all of the buoyancy calculations as they are not relevant to the final report.
 
-A crucial aspect of the RMS Titanic 2 autonomous surface vehicle is its ability to remain buoyant and stable while carrying all mission-critical components, including the electromagnetic coil of wire, electronic components, batteries, and solar panel. To ensure this, a comprehensive structural and buoyancy analysis was performed using a Python-based workflow.
+% \subsection{Buoyancy Calculations}
 
-\subsubsection{Pipe and Material Specifications}
+% A crucial aspect of the RMS Titanic 2 autonomous surface vehicle is its ability to remain buoyant and stable while carrying all mission-critical components, including the electromagnetic coil of wire, electronic components, batteries, and solar panel. To ensure this, a comprehensive structural and buoyancy analysis was performed using a Python-based workflow.
 
-The vessel's primary flotation is provided by two large-diameter PVC pipes, each with an inner diameter of 4 inches and a length of 30 inches.
-The density of polycarbonate (1210 kg/m$^3$) and seawater (1025 kg/m$^3$) were used as reference values for calculations.
-The mass of each PVC pipe was calculated using the manufacturer's specified weight per foot, converted to metric units for consistency.
+% \subsubsection{Pipe and Material Specifications}
 
-\subsubsection{Component Mass Budget}
+% The vessel's primary flotation is provided by two large-diameter PVC pipes, each with an inner diameter of 4 inches and a length of 30 inches.
+% The density of polycarbonate (1210 kg/m$^3$) and seawater (1025 kg/m$^3$) were used as reference values for calculations.
+% The mass of each PVC pipe was calculated using the manufacturer's specified weight per foot, converted to metric units for consistency.
 
-The total system weight includes all major components: electromagnetic coil (2.95 kg), servo, propulsion motor, LiFePO$_4$ battery, PVC housing, and a 6 kg solar panel.
-A 5\% contingency margin was added to account for mounting hardware, fasteners, and unforeseen additions.
+% \subsubsection{Component Mass Budget}
 
-\subsubsection{The Analysis}
-The internal volume of each PVC pipe was computed and multiplied by the number of pipes to determine the total displaced volume.
-The buoyant force was calculated as the product of displaced seawater volume and seawater density.
-The total required buoyancy was set to the system's weight multiplied by a 1.25 safety factor, ensuring a 25\% margin for dynamic loads and environmental uncertainties.
-The difference between required buoyancy and the buoyancy provided by the PVC pipes determined the additional lift needed from closed-cell foam---we use Pink foam.
+% The total system weight includes all major components: electromagnetic coil (2.95 kg), servo, propulsion motor, LiFePO$_4$ battery, PVC housing, and a 6 kg solar panel.
+% A 5\% contingency margin was added to account for mounting hardware, fasteners, and unforeseen additions.
 
-\subsubsection{Foam Material Evaluation}
+% \subsubsection{The Analysis}
+% The internal volume of each PVC pipe was computed and multiplied by the number of pipes to determine the total displaced volume.
+% The buoyant force was calculated as the product of displaced seawater volume and seawater density.
+% The total required buoyancy was set to the system's weight multiplied by a 1.25 safety factor, ensuring a 25\% margin for dynamic loads and environmental uncertainties.
+% The difference between required buoyancy and the buoyancy provided by the PVC pipes determined the additional lift needed from closed-cell foam---we use Pink foam.
 
-Several foam options were considered, including marine-grade polyethylene, polyurethane, PVC foam, syntactic foam, and pink EPS foam- the latter being the most accessible and convenient whilst maintaining the properties required for floatation
-For each material, the required foam volume and example thickness (assuming a 30$\times$15 cm base area) were calculated, aiding in rapid material selection and prototyping.
+% \subsubsection{Foam Material Evaluation}
 
-\subsubsection{Summary of Results}
+% Several foam options were considered, including marine-grade polyethylene, polyurethane, PVC foam, syntactic foam, and pink EPS foam- the latter being the most accessible and convenient whilst maintaining the properties required for floatation
+% For each material, the required foam volume and example thickness (assuming a 30$\times$15 cm base area) were calculated, aiding in rapid material selection and prototyping.
 
-The analysis provided a clear breakdown of the vessel's mass, the buoyancy contribution of the PVC pipes, and the precise amount of additional foam required for safe operation.
-This approach allowed for iterative design, supporting quick assessment of the impact of component changes or material substitutions on vessel stability.
-The resulting design ensures that the ASV is robust and is capable of supporting all hardware without risk of sinking or instability, even under varying environmental conditions.
-This structural and buoyancy analysis was essential for validating the design of the RMS Titanic 2 platform, ensuring reliable operation during autonomous missions in coastal waters.
+% \subsubsection{Summary of Results}
 
-\subsubsection{Python Code for Buoyancy Analysis}
-\begin{verbatim}
-    import math
+% The analysis provided a clear breakdown of the vessel's mass, the buoyancy contribution of the PVC pipes, and the precise amount of additional foam required for safe operation.
+% This approach allowed for iterative design, supporting quick assessment of the impact of component changes or material substitutions on vessel stability.
+% The resulting design ensures that the ASV is robust and is capable of supporting all hardware without risk of sinking or instability, even under varying environmental conditions.
+% This structural and buoyancy analysis was essential for validating the design of the RMS Titanic 2 platform, ensuring reliable operation during autonomous missions in coastal waters.
+
+% \subsubsection{Python Code for Buoyancy Analysis}
+% \begin{verbatim}
+%     import math
     
-    # --- MATERIAL PROPERTIES ---
-    POLYCARB_DENSITY = 1210      # kg/m³, density of polycarbonate
-    SALTWATER_DENSITY = 1025     # kg/m³, typical density of seawater
+%     # --- MATERIAL PROPERTIES ---
+%     POLYCARB_DENSITY = 1210      # kg/m³, density of polycarbonate
+%     SALTWATER_DENSITY = 1025     # kg/m³, typical density of seawater
     
-    # --- PIPE SPECIFICATIONS ---
-    NUM_PIPES = 2
-    INNER_DIAMETER_IN = 4.0      # Inner diameter in inches
-    LENGTH_IN = 30               # Length in inches
-    WEIGHT_PER_FOOT_PVC = 2.01
+%     # --- PIPE SPECIFICATIONS ---
+%     NUM_PIPES = 2
+%     INNER_DIAMETER_IN = 4.0      # Inner diameter in inches
+%     LENGTH_IN = 30               # Length in inches
+%     WEIGHT_PER_FOOT_PVC = 2.01
     
-    def in_to_m(inches):
-        """Convert inches to meters."""
-        return inches * 0.0254
+%     def in_to_m(inches):
+%         """Convert inches to meters."""
+%         return inches * 0.0254
     
-    # --- COMPONENT WEIGHTS (UPDATED WITH SOLAR PANEL) ---
-    components = {
-        'em_coil': 2.95,         # Electromagnetic coil
-        'servo': 0.068,          # Servo motor
-        'motor': 0.500,          # Propulsion motor
-        'battery': 1.80,         # LiFePO4 battery
-        'small_pvc': 0.227,      # PVC housing
-        'solar_panel': 6.00      # 6kg solar panel
-    }
+%     # --- COMPONENT WEIGHTS (UPDATED WITH SOLAR PANEL) ---
+%     components = {
+%         'em_coil': 2.95,         # Electromagnetic coil
+%         'servo': 0.068,          # Servo motor
+%         'motor': 0.500,          # Propulsion motor
+%         'battery': 1.80,         # LiFePO4 battery
+%         'small_pvc': 0.227,      # PVC housing
+%         'solar_panel': 6.00      # 6kg solar panel
+%     }
     
-    # --- CALCULATE PIPE MASS USING INNER DIAMETER ---
-    inner_radius = in_to_m(INNER_DIAMETER_IN) / 2
-    length_m = in_to_m(LENGTH_IN)
-    single_pipe_volume = math.pi * (inner_radius ** 2) * length_m
-    total_pipe_volume = single_pipe_volume * NUM_PIPES
+%     # --- CALCULATE PIPE MASS USING INNER DIAMETER ---
+%     inner_radius = in_to_m(INNER_DIAMETER_IN) / 2
+%     length_m = in_to_m(LENGTH_IN)
+%     single_pipe_volume = math.pi * (inner_radius ** 2) * length_m
+%     total_pipe_volume = single_pipe_volume * NUM_PIPES
     
-    pipe_mass = (WEIGHT_PER_FOOT_PVC * LENGTH_IN / 12) # add lb to kg conversion
+%     pipe_mass = (WEIGHT_PER_FOOT_PVC * LENGTH_IN / 12) # add lb to kg conversion
     
-    # --- TOTAL WEIGHT CALCULATION ---
-    component_sum = sum(components.values())
-    contingency = component_sum * 0.05  # 5% contingency
-    total_weight = component_sum + pipe_mass + contingency
+%     # --- TOTAL WEIGHT CALCULATION ---
+%     component_sum = sum(components.values())
+%     contingency = component_sum * 0.05  # 5% contingency
+%     total_weight = component_sum + pipe_mass + contingency
     
-    # --- BUOYANCY ANALYSIS ---
-    displaced_volume = total_pipe_volume
-    buoyant_force = displaced_volume * SALTWATER_DENSITY
-    safety_margin = 1.25  # 25% safety factor
-    required_buoyancy = total_weight * safety_margin
-    required_foam = required_buoyancy - buoyant_force
+%     # --- BUOYANCY ANALYSIS ---
+%     displaced_volume = total_pipe_volume
+%     buoyant_force = displaced_volume * SALTWATER_DENSITY
+%     safety_margin = 1.25  # 25% safety factor
+%     required_buoyancy = total_weight * safety_margin
+%     required_foam = required_buoyancy - buoyant_force
     
-    # --- FOAM MATERIAL OPTIONS (INCLUDING PINK EPS FOAM) ---
-    # Buoyancy is equal to F= Rho * V * g;
-    # Weight of item m = density*v
-    # effective bouyant force Fb = F - g*m
+%     # --- FOAM MATERIAL OPTIONS (INCLUDING PINK EPS FOAM) ---
+%     # Buoyancy is equal to F= Rho * V * g;
+%     # Weight of item m = density*v
+%     # effective bouyant force Fb = F - g*m
     
-    foams = {
-        'Polyethylene': 0.90,    # Marine foam
-        'Polyurethane': 0.85,    # Marine foam
-        'PVC Foam': 0.52,        # Structural
-        'Syntactic Foam': 0.88,  # Deep water
-        'Pink EPS Foam': 0.98    #  lb/ft³ density (~32 kg/m³)2
-    }
+%     foams = {
+%         'Polyethylene': 0.90,    # Marine foam
+%         'Polyurethane': 0.85,    # Marine foam
+%         'PVC Foam': 0.52,        # Structural
+%         'Syntactic Foam': 0.88,  # Deep water
+%         'Pink EPS Foam': 0.98    #  lb/ft³ density (~32 kg/m³)2
+%     }
     
-    print("[BUOYANCY ANALYSIS]")
-    print(f"Polycarbonate Pipe Mass: {pipe_mass:.2f} kg")
-    print(f"Total Vessel Weight: {total_weight:.2f} kg")
-    print(f"Pipe Buoyancy Contribution: {buoyant_force:.2f} kg")
-    print(f"Total Buoyancy Required: {required_buoyancy:.2f} kg")
-    print(f"Required Foam Buoyancy: {required_foam:.2f} kg\n")
+%     print("[BUOYANCY ANALYSIS]")
+%     print(f"Polycarbonate Pipe Mass: {pipe_mass:.2f} kg")
+%     print(f"Total Vessel Weight: {total_weight:.2f} kg")
+%     print(f"Pipe Buoyancy Contribution: {buoyant_force:.2f} kg")
+%     print(f"Total Buoyancy Required: {required_buoyancy:.2f} kg")
+%     print(f"Required Foam Buoyancy: {required_foam:.2f} kg\n")
     
-    print("[FOAM VOLUME REQUIREMENTS]")
-    print("Material         | Volume Needed (liters) | Example Thickness (cm)")
-    print("-----------------|------------------------|-----------------------")
+%     print("[FOAM VOLUME REQUIREMENTS]")
+%     print("Material         | Volume Needed (liters) | Example Thickness (cm)")
+%     print("-----------------|------------------------|-----------------------")
     
-    for material, buoyancy in foams.items():
-        volume = required_foam / buoyancy if required_foam > 0 else 0
-        thickness = (volume * 1000) / (30 * 15)  # 30x15cm base area
-        print(f"{material:16} | {volume:8.1f}              | {thickness:5.1f}")
-    \end{lstlisting}
+%     for material, buoyancy in foams.items():
+%         volume = required_foam / buoyancy if required_foam > 0 else 0
+%         thickness = (volume * 1000) / (30 * 15)  # 30x15cm base area
+%         print(f"{material:16} | {volume:8.1f}              | {thickness:5.1f}")
+%     \end{lstlisting}
     
-\end{verbatim}
+% \end{verbatim}
 
 \subsection{Electromagnetic Coil Modeling and Magnetic Field Calculations}
 A critical component of the RMS Titanic 2 system is the electromagnetic coil, which generates a low-frequency magnetic field for underwater detection and tracking. To optimize the coil design and predict its performance, a Python-based simulation was developed. This code calculates the electrical properties of a rectangular coil and simulates the resulting magnetic field at a specified observation point, using both analytical and numerical methods.
