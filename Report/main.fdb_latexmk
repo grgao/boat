@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1746809218.76711 "main.aux" "main.bbl" "main" 1746809226.92993 0
+["bibtex main"] 1746811602.89068 "main.aux" "main.bbl" "main" 1746811643.87948 0
   "./ref.bib" 1746564970 2411 d2afdeec8009ff2ceb6581545bb97795 ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1746809224 16627 4ee54d64c5a1539293b18db37a6e6e61 "pdflatex"
+  "main.aux" 1746811642 17027 0b4b1f8dfd69120712131a53f624b553 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1746809219.64152 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746809226.93063 0
+["pdflatex"] 1746811637.17379 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746811643.8802 0
   "Battery_Base.png" 1746747801 829150 f32a7cafdb45bab8f4c7381091eafe64 ""
   "BillofMaterials.tex" 1746564970 162 74ba19201afbda1e54018859ed70c004 ""
   "C:/Users/glmg1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746771071 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -58,7 +58,6 @@
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb" 1256929440 122174 a2d5e73f396ddbeb3bdf5c79aea0993d ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb" 1256929440 119663 1a3a2206591ddc98c6d6c6271a282516 ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb" 1256929440 27863 09ce3735688ffde955e72da27c95b61a ""
-  "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb" 1256929440 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb" 1256929440 113227 d3d1adc024746ff57b20efba82c6d365 ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -247,7 +246,7 @@
   "Clamp.png" 1746748241 645689 b47e30a922b64d326eb4d46e88c67c06 ""
   "Coding.tex" 1746763456 15694 bbf77b5a88904af7b3774a619a0ed48a ""
   "DC-DC converter.pdf" 1746728413 111609 bbdcfe66ebbb0f608c077d35e98c4c22 ""
-  "Electrical.tex" 1746809208 8011 52703656ad6a1cfdba5793e3dc32a646 ""
+  "Electrical.tex" 1746811640 7825 ec332d4c5945e7dcf900cbc5fd2cc754 ""
   "Flange_Assembly.png" 1746654995 746288 2e63951ca0f8c48ffd3a37124c167004 ""
   "FutureWork.tex" 1746758800 8339 fb3623c2d54d77139409c3b9615915c1 ""
   "Hardware.tex" 1746767910 4547 7779e6dbe6e229168840df3cb511eed5 ""
@@ -263,9 +262,9 @@
   "Vout_chart.png" 1746771120 43823 1855bc13f3f93713da7a2ac60fc346fa ""
   "appendix.tex" 1746748343 1035 2a6aa2d3b2d818b620a4174b5abe7406 ""
   "c:/Personal/School/ECE 455/boat/Report/main.tex" 1746771120 4755 dddc685118856f493880af145fa0ab0f ""
-  "main.aux" 1746809224 16627 4ee54d64c5a1539293b18db37a6e6e61 "pdflatex"
-  "main.bbl" 1746809219 901 628a2a8c68e066122d1514411e0b8455 "bibtex main"
-  "main.out" 1746809221 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1746811642 17027 0b4b1f8dfd69120712131a53f624b553 "pdflatex"
+  "main.bbl" 1746811603 901 628a2a8c68e066122d1514411e0b8455 "bibtex main"
+  "main.out" 1746811638 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1746771120 4755 dddc685118856f493880af145fa0ab0f ""
   "power_amp.jpg" 1746764314 38137 49e6a53dd47f287e78cd685325a47fec ""
   "references.tex" 1746564970 48 1287a31b52d977c11dd8c225a3fedf96 ""
