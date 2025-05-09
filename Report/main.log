@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.1)  8 MAY 2025 22:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.5.1)  8 MAY 2025 23:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1201,7 +1201,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 )
 (BillofMaterials.tex) (Circuit_schem.tex
-<Voltage Regulator.png, id=14, 1113.15875pt x 430.60875pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \section
+            {Circuit Schematics} [1]
+<Voltage Regulator.png, id=20, 1113.15875pt x 430.60875pt>
 File: Voltage Regulator.png Graphic file (type png)
 <use Voltage Regulator.png>
 Package pdftex.def Info: Voltage Regulator.png  used on input line 6.
@@ -1212,19 +1221,10 @@ Overfull \hbox (11.31038pt too wide) in paragraph at lines 6--7
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.9 \end{figure}
-                 [1]
 
 pdfTeX warning: miktex-pdftex.exe (file ./DC-DC converter.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<DC-DC converter.pdf, id=24, 794.97pt x 614.295pt>
+<DC-DC converter.pdf, id=23, 794.97pt x 614.295pt>
 File: DC-DC converter.pdf Graphic file (type pdf)
 <use DC-DC converter.pdf>
 Package pdftex.def Info: DC-DC converter.pdf  used on input line 13.
@@ -1318,39 +1318,71 @@ s been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.6 P
      ower is distributed through two voltage regulators that step the 12.8V ...
- <./Solar_Panel_Assembly.png>]
-<speedybee.png, id=77, 1657.19125pt x 3036.34375pt>
-File: speedybee.png Graphic file (type png)
-<use speedybee.png>
-Package pdftex.def Info: speedybee.png  used on input line 13.
-(pdftex.def)             Requested size: 155.28543pt x 284.52756pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6
+ <./Solar_Panel_Assembly.png>] [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.17 
-      <./Flange_Assembly.png>] [7
+l.11 
+      <./Flange_Assembly.png>]
+<speedybee.png, id=85, 1657.19125pt x 3036.34375pt>
+File: speedybee.png Graphic file (type png)
+<use speedybee.png>
+Package pdftex.def Info: speedybee.png  used on input line 15.
+(pdftex.def)             Requested size: 155.28543pt x 284.52756pt.
+ [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.31     \item \(
-                  \mu_0 = 4\pi \times 10^{-7} \, \text{T}\cdot\text{m/A} \) ...
- <./speedybee.png>]
+l.23 
+      <./speedybee.png>]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-1.
+3.
 
 (C:\Users\gaogr\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-))
-(Coding.tex [8{C:/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-ts1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-9.
+)
+<Signal Generator.jpg, id=93, 681.54625pt x 425.59pt>
+File: Signal Generator.jpg Graphic file (type jpg)
+<use Signal Generator.jpg>
+Package pdftex.def Info: Signal Generator.jpg  used on input line 48.
+(pdftex.def)             Requested size: 364.52484pt x 227.62204pt.
+ [8{C:/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
+]
+
+LaTeX Warning: Reference `fig:Signal Generator' on page 9 undefined on input li
+ne 52.
+
+<power_amp.jpg, id=103, 467.7475pt x 369.38pt>
+File: power_amp.jpg Graphic file (type jpg)
+<use power_amp.jpg>
+Package pdftex.def Info: power_amp.jpg  used on input line 56.
+(pdftex.def)             Requested size: 288.23753pt x 227.62204pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.60 F
+      ig. \ref{fig:Power Amplifier} shows the Power Amplifier board we bough...
+ <./Signal Generator.jpg>]
+
+LaTeX Warning: Reference `fig:Power Amplifier' on page 10 undefined on input li
+ne 60.
+
+) (Coding.tex [10
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.125 
+       <./power_amp.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+29.
 
 (C:\Users\gaogr\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1359,106 +1391,55 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-116.
-
-(C:\Users\gaogr\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmtt.fd
-File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TS1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-Package microtype Info: Character `texttrademark ' is missing
-(microtype)             in font `TS1/lmtt/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
- [9]
-Overfull \hbox (29.89406pt too wide) in paragraph at lines 116--116
-[]    \T1/lmtt/m/n/10.95 pipe_mass = (WEIGHT_PER_FOOT_PVC * LENGTH_IN / 12) # a
-dd lb to kg conversion[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-Overfull \hbox (24.14532pt too wide) in paragraph at lines 116--116
-[]    \T1/lmtt/m/n/10.95 print("Material         | Volume Needed (liters) | Exa
-mple Thickness (cm)")[] 
- []
-
-
-Overfull \hbox (24.14532pt too wide) in paragraph at lines 116--116
-[]    \T1/lmtt/m/n/10.95 print("-----------------|------------------------|----
--------------------")[] 
- []
-
-
-Overfull \hbox (24.14532pt too wide) in paragraph at lines 116--116
-[]        \T1/lmtt/m/n/10.95 print(f"{material:16} | {volume:8.1f}             
- | {thickness:5.1f}")[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [11]
-[12] [13] [14]
+[12] [13]
 (C:\Users\gaogr\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 (C:\Users\gaogr\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-Overfull \hbox (0.92847pt too wide) in paragraph at lines 243--244
+Overfull \hbox (0.92847pt too wide) in paragraph at lines 245--246
 []\T1/lmr/bx/n/10.95 (-20) Disable pitch and roll mix-ing \T1/lmr/m/n/10.95 (-2
 0) by set-ting these in-puts to zero in the \T1/lmtt/m/n/10.95 mixTable()
  []
 
-[15]) (Operating Instructions.tex [16]) (Troubleshooting.tex [17] [18])
-(project_testing.tex) (FutureWork.tex [19] [20] [21]) (references.tex
+[14]) (Operating Instructions.tex [15]) (Troubleshooting.tex [16])
+(project_testing.tex
+Underfull \vbox (badness 3701) has occurred while \output is active []
+
+ [17])
+(FutureWork.tex [18] [19] [20]) (references.tex
 No file main.bbl.
-) [22] (appendix.tex
-<Battery_Base.png, id=228, 3308.36pt x 2556.55125pt>
+) [21] (appendix.tex
+<Battery_Base.png, id=223, 3308.36pt x 2556.55125pt>
 File: Battery_Base.png Graphic file (type png)
 <use Battery_Base.png>
 Package pdftex.def Info: Battery_Base.png  used on input line 5.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Clamp.png, id=229, 3308.36pt x 2556.55125pt>
+<Clamp.png, id=224, 3308.36pt x 2556.55125pt>
 File: Clamp.png Graphic file (type png)
 <use Clamp.png>
 Package pdftex.def Info: Clamp.png  used on input line 12.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Motor_to_PVC.png, id=230, 3308.36pt x 2556.55125pt>
+<Motor_to_PVC.png, id=225, 3308.36pt x 2556.55125pt>
 File: Motor_to_PVC.png Graphic file (type png)
 <use Motor_to_PVC.png>
 Package pdftex.def Info: Motor_to_PVC.png  used on input line 19.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Perfboard_Mounting.png, id=231, 3308.36pt x 2556.55125pt>
+<Perfboard_Mounting.png, id=226, 3308.36pt x 2556.55125pt>
 File: Perfboard_Mounting.png Graphic file (type png)
 <use Perfboard_Mounting.png>
 Package pdftex.def Info: Perfboard_Mounting.png  used on input line 26.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-<Servo_to_PVC.png, id=232, 3308.36pt x 2556.55125pt>
+<Servo_to_PVC.png, id=227, 3308.36pt x 2556.55125pt>
 File: Servo_to_PVC.png Graphic file (type png)
 <use Servo_to_PVC.png>
 Package pdftex.def Info: Servo_to_PVC.png  used on input line 33.
 (pdftex.def)             Requested size: 171.99922pt x 132.90631pt.
-) [23
+) [22
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.153 \end{document}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) ha
-s been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.153 \end{document}
-                     <./Battery_Base.png> <./Clamp.png>] [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -1470,8 +1451,20 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.153 \end{document}
-                    
+                     <./Battery_Base.png> <./Clamp.png>] [23
 pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.153 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.11}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.153 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.12}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
@@ -1482,17 +1475,24 @@ o_PVC.png>] (main.aux)
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 36348 strings out of 474485
- 756908 string characters out of 5743735
- 2028542 words of memory out of 5000000
- 57776 multiletter control sequences out of 15000+600000
- 617186 words of font info for 148 fonts, out of 8000000 for 9000
+ 36305 strings out of 474485
+ 756296 string characters out of 5743735
+ 2002542 words of memory out of 5000000
+ 57746 multiletter control sequences out of 15000+600000
+ 613725 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 108i,13n,107p,10901b,2570s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,13n,107p,10901b,1397s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.p
@@ -1507,9 +1507,9 @@ Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
 :/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
 :/Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:
 /Users/gaogr/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (25 pages, 4114414 bytes).
+Output written on main.pdf (24 pages, 4191991 bytes).
 PDF statistics:
- 466 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 36719 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 439 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 34121 words of extra memory for PDF output out of 35830 (max. 10000000)
 
