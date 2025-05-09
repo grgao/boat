@@ -19,7 +19,7 @@ The Voltage Regulator (See Figure~\ref{fig:Voltage Regulator}) provided us a qui
 
 The SpeedyBee F405 V4 flight controller runs iNav firmware and handles both GPS waypoint navigation and motor control. It outputs PWM signals to the brushed DC motor and rudder servo and receives location data from a GPS module. The GPS is soldered directly to UART6 on the flight controller: TX from the GPS is connected to RX6, and RX from the GPS is connected to TX6. A FlySky FS-iA6B receiver is soldered directly to the RX2 pad on the flight controller for SBUS communication, enabling manual RC override when needed.
 
-To generate a magnetic field, a 40 Hz sine wave is created by a prebuilt signal generator and passed through a power amplifier. The amplified signal drives a large copper coil wrapped around the boat’s structure, producing a low-frequency magnetic field detectable by submerged sensors.
+To generate a magnetic field, a 40 Hz sine wave is created by a prebuilt signal generator and passed through a power amplifier. The amplified signal drives a large copper coil wrapped around the ASV’s structure, producing a low-frequency magnetic field detectable by submerged sensors.
 
 The magnetic field \( B \) at the center of a circular coil is given by:
 
