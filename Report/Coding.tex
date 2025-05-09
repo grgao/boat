@@ -183,7 +183,101 @@ V=\oint \overrightarrow{E}\cdot d\overrightarrow{l}
 \label{MyEquation}
 \end{equation}
 
-You can use this link to find the full github repository : https://github.com/grgao/boat/tree/main/ECE%20455_Report .
+\subsection{iNav Configuration}
+
+The SpeedyBee F405 V4 flight controller was flashed with iNav 7 firmware to enable GPS-based return-to-home (RTH) functionality and manual control. iNav 7 was selected because of its improved support for surface vehicles, enhanced GPS navigation features, and full compatibility with the SpeedyBee F405 V4 without requiring custom firmware builds.
+
+\subsubsection*{Mixer Modifications}
+
+By default, iNav's boat mixer uses differential thrust with two motors for steering. Since our ASV uses a single brushed DC motor for propulsion and a rudder servo for steering, this default configuration was unsuitable.
+
+To support our hardware, we modified the mixer setup in \texttt{mixer.c} to map throttle directly to Motor 0 and yaw to Servo 0. Pitch and roll mixing were disabled, as they are unnecessary for surface operation. This allowed the boat to steer using the rudder while maintaining forward propulsion with the single motor.
+
+\subsubsection*{Firmware Configuration Changes}
+
+Several key settings were configured using the iNav Configurator and CLI to support manual control and GPS-assisted return-to-home:
+
+\begin{itemize}
+    \item \textbf{Ports:}
+    \begin{itemize}
+        \item UART6 configured for GPS (UBlox protocol)
+        \item UART2 configured for SBUS receiver (FlySky FS-iA6B)
+    \end{itemize}
+    \item \textbf{Failsafe:} Configured to trigger Return-to-Home (RTH) on signal loss.
+    \item \textbf{Flight Modes:} Enabled MANUAL, ANGLE, and RTH. AUTO mode was left disabled.
+    \item \textbf{Arming:} Manual arming allowed when GPS lock is acquired.
+    \item \textbf{PID Tuning:} Pitch and roll control disabled; yaw PID tuned for surface steering only.
+\end{itemize}
+
+Example CLI commands used:
+
+\begin{lstlisting}
+mixer load boat
+set gps_provider = UBLOX
+set gps_auto_config = ON
+set gps_auto_baud = ON
+set serialrx_provider = SBUS
+set failsafe_procedure = RTH
+set nav_rth_allow_landing = OFF
+save
+\end{lstlisting}
+
+\subsubsection*{Source Code Adjustments}
+
+The full iNav firmware was not rewritten, but minor modifications were made to the mixer definitions in \texttt{mixer.c} to support single-motor with rudder control. No other firmware files were changed. iNav’s official repository was used as the base.
+
+\subsubsection*{Reproduction Instructions}
+
+To reproduce this firmware setup:
+
+\begin{enumerate}
+    \item Clone the official iNav firmware repository:
+    \begin{lstlisting}
+git clone https://github.com/iNavFlight/inav.git
+cd inav
+    \end{lstlisting}
+
+    
+    \item Modify \texttt{src/main/mixer/mixer.c} to implement a single-motor and rudder mixer by:
+    \begin{itemize}
+        \item \textbf{Disable pitch and roll mixing} by setting these inputs to zero in the \texttt{mixTable()} function:
+        \begin{lstlisting}[language=C]
+            input[ROLL] = 0;
+            input[PITCH] = 0;
+        \end{lstlisting}
+
+        \item \textbf{Map throttle to Motor 0 only} by replacing the motor loop with:
+        \begin{lstlisting}[language=C]
+            for (int i = 0; i < motorCount; i++) {
+                if (i == 0) {
+                    motor[i] = mixerThrottleCommand;
+                } else {
+                    motor[i] = motorZeroCommand;
+                }
+            }
+        \end{lstlisting}
+
+        \item \textbf{Map yaw to Servo 0} by ensuring yaw control is configured in the servo mixer or output settings, instead of applying yaw to the motor mixer.
+    \end{itemize}
 
 
+    \item Build the firmware following iNav's official build instructions.
 
+    \item Flash the compiled firmware to the SpeedyBee F405 V4.
+
+    \item Apply the CLI configuration listed above.
+
+    \item Test GPS lock, receiver input, motor output, rudder control, and Return-to-Home functionality before deployment.
+\end{enumerate}
+
+\subsubsection*{Summary}
+
+These modifications allowed the ASV to operate with stable manual control and GPS-assisted return-to-home, while disabling unnecessary flight-specific features.
+
+\bigskip
+
+The complete project repository, including design documentation, hardware details, software configuration, and source code references, is available at:
+
+\begin{center}
+\url{https://github.com/grgao/boat/tree/main/ECE%20455_Report}
+\end{center}
