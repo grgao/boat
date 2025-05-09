@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1746816849.3276 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746816855.40477 0
+["pdflatex"] 1746817014.94691 "c:/Personal/School/ECE 455/boat/Report/main.tex" "main.pdf" "main" 1746817020.89923 0
   "Battery_Base.png" 1746747801 829150 f32a7cafdb45bab8f4c7381091eafe64 ""
   "BillofMaterials.tex" 1746816612 2328 d4b9e62e6dfb04c3829dfd840398439c ""
   "C:/Users/glmg1/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746771071 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
@@ -238,7 +238,7 @@
   "C:/Users/glmg1/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
   "Circuit_schem.tex" 1746765840 1998 64d8ea282d6483f755c75d62d9d52ca6 ""
   "Clamp.png" 1746748241 645689 b47e30a922b64d326eb4d46e88c67c06 ""
-  "Coding.tex" 1746816809 7279 ce40367e4401b3b6cb1632f3109920b7 ""
+  "Coding.tex" 1746817011 6824 e75157cde282e2fa65e45b4b4319c614 ""
   "DC-DC converter.pdf" 1746728413 111609 bbdcfe66ebbb0f608c077d35e98c4c22 ""
   "Electrical.tex" 1746814443 8142 020a72c78cb9534e81b50055d083aa32 ""
   "Flange_Assembly.png" 1746654995 746288 2e63951ca0f8c48ffd3a37124c167004 ""
@@ -257,8 +257,8 @@
   "Vout_chart.png" 1746771120 43823 1855bc13f3f93713da7a2ac60fc346fa ""
   "appendix.tex" 1746748343 1035 2a6aa2d3b2d818b620a4174b5abe7406 ""
   "c:/Personal/School/ECE 455/boat/Report/main.tex" 1746816842 4796 b9e8e8fb5dac5c30bb0defddbd67b9a8 ""
-  "main.aux" 1746816854 14529 d078cfccaadff546acd5105d942a8626 "pdflatex"
-  "main.out" 1746816850 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.aux" 1746817020 14529 0c80b7d175eabd30665aa6e7cb211a14 "pdflatex"
+  "main.out" 1746817016 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "main.tex" 1746816842 4796 b9e8e8fb5dac5c30bb0defddbd67b9a8 ""
   "power_amp.jpg" 1746764314 38137 49e6a53dd47f287e78cd685325a47fec ""
   "speedybee.png" 1746564970 1122886 56b445a19fd7013d04301b758dfa4497 ""
