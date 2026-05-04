@@ -1,0 +1,102 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white; /* Makes text readable */
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* General Styling */
+.map-container {
+  text-align: center;
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Map Styling */
+.leaflet-map {
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Mode Buttons */
+.mode-buttons {
+  margin-bottom: 15px;
+}
+
+.mode-buttons button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.mode-buttons button.active {
+  background-color: #007bff;
+}
+
+.mode-buttons button:hover {
+  background-color: #555;
+}
+
+/* Control Buttons */
+.controls {
+  margin-top: 10px;
+}
+
+.controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #120086;
+}
+
+/* Route Input */
+.route-input {
+  margin-top: 15px;
+}
+
+.route-input input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.route-input button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.route-input button:hover {
+  background-color: #218838;
+}
+
+
+
+
